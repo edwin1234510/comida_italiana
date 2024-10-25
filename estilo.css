@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rock+Salt&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* font-family: "Rock Salt", cursive; */ 
+/* font-family: "Open Sans", sans-serif; */
+.container{
+  width: 100%;
+}
+.content_layout{
+  display: grid;
+  grid-template-areas:
+  'inicio'
+  'menu' 
+  'descripcion'
+  'descuentos'
+  'pizza'
+  'informacion'
+  'suscripcion'
+  'redes';
+  /* grid-template-rows: ; */
+  height: 100vh;
+}
+.inicio{
+  background-image: url(/imagenes/fondo.png);;
+}
+.contenedor-buscador{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-top: 40px;
+  align-items: center;
+  gap: 20px;
+}
+.contenedor-buscador__boton{
+  height: 100%;
+  /* max-width: 150px; */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: 18px; */
+  padding: 0 12px;
+}
+.contenedor-buscador__texto{
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+.navegador{
+  margin-right: 150px;
+  margin-left: 30px;
+  background-color: #fff;
+  height: 35px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 140px;
+}
+.navegador__icono{
+  margin-right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #292b2e;
+}
+.contenedor-informacion{
+  margin-left: 150px;
+  color: white;
+}
+
+
+
+
+
+
+.nombre__titulo{
+  font-family: "Rock Salt", cursive;
+  font-size: 80px;
+}

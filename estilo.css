@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Splash&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Splash&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Splash&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -21,7 +24,6 @@
   'informacion'
   'suscripcion'
   'redes';
-  /* grid-template-rows: ; */
   height: 100vh;
 }
 .inicio{
@@ -39,12 +41,10 @@
 }
 .contenedor-buscador__boton{
   height: 100%;
-  /* max-width: 150px; */
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-right: 18px; */
   padding: 0 12px;
 }
 .contenedor-buscador__texto{
@@ -53,7 +53,7 @@
   font-family: "Open Sans", sans-serif;
 }
 .navegador{
-  margin-right: 150px;
+  margin-right: 70px;
   margin-left: 30px;
   background-color: #fff;
   height: 35px;
@@ -70,16 +70,69 @@
   color: #292b2e;
 }
 .contenedor-informacion{
-  margin-left: 150px;
+  margin-left: 60px;
+  margin-right: 60px;
   color: white;
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+.nombre{
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+}
+.nombre__logo{
+  width: 110px;
+  height: 90px;
+}
+.nombre__titulo{
+  font-family: "Water Brush", cursive;
+  font-size: 120px;
+  font-weight: 100;
+  margin-top: 12px;
 }
 
-
-
-
-
-
-.nombre__titulo{
-  font-family: "Rock Salt", cursive;
-  font-size: 80px;
+.nombre__subtitulo{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+.nombre__boton{
+  background-color: #fff;
+  color: #292b2e;
+  padding: 8px 20px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 750;
+  max-width: 150px;
+  text-align: center;
+}
+.nombre__parrafo{
+  max-width: 500px;
+  width: 100%;
+  margin-top: 30px;
+  font-weight: 400;
+}
+.platillos{
+  display: flex;
+  margin-right: 120px;
+}
+.platillos__imagen--primer_plato{
+  margin-left: 50px;
+  width: 620px;
+  height: 620px;
+}
+.platillos__imagen--segundo_plato{
+  position: absolute;
+  bottom: -90px;
+  width: 250px;
+  height: 250px;
 }

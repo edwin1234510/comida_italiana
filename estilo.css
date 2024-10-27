@@ -10,8 +10,9 @@
 }
 /* font-family: "Rock Salt", cursive; */ 
 /* font-family: "Open Sans", sans-serif; */
-.container{
-  width: 100%;
+
+body{
+  overflow-x: hidden;
 }
 .content_layout{
   display: grid;
@@ -25,11 +26,12 @@
   'suscripcion'
   'redes';
   height: 100vh;
+  width: 100%;
 }
 .inicio{
   grid-area: inicio;
-  background-image: url(https://ethic.es/wp-content/uploads/2023/03/imagen.jpg);
-  background-size: 100%;
+  background-image: url(/imagenes/fondo.png);
+  background-size: cover;
   padding-bottom: 50px;
 }
 .contenedor-buscador{
@@ -58,11 +60,10 @@
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
   cursor: pointer;
-  transition: 0.5s;
+
 }
 .contenedor-buscador__boton:hover{
-  border-bottom: 3px ridge #ccc;
-  color: #ccc;
+  border-bottom: 3px ridge #fff;
 }
 .navegador{
   margin-right: 70px;
@@ -159,7 +160,7 @@
 }
 .inicio__hojas{
   position: absolute;
-  bottom: -180px;
+  bottom: -165px;
   right: 0px;
 }
 @media (max-width:1223px){
@@ -254,6 +255,180 @@
 }
 .descripcion{
   grid-area: descripcion;
-  background-color: beige;
+  background-color: #292b2e;
+  color: #fff;
+}
+.descripcion__contenido{
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.descripcion__contenido__titulo{
+  font-family: "Water Brush", cursive;
+  font-size: 120px;
+  font-weight: 100;
 
+}
+.caja{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+.caja_parrafo{
+  max-width: 480px;
+  margin: 30px 20px 0 20px ;
+  font-size: 15px;
+  font-weight: 300;
+}
+.pizza{
+  grid-area: pizza;
+  background-image: url(/imagenes/fondo.png);
+  background-size: cover;
+  height: 720px;
+}
+.cja__pizza{
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.pcja__pizza__imagen_piza{
+  position: relative;
+}
+.cja__pizza__imagen_triangulo{
+  position: relative;
+  margin-top: 480px;
+  width: 380px;
+  height: 330px;
+  left: 260px;
+}
+.informacion{
+  grid-area: informacion;
+  color: #292b2e;
+}
+.informacion__container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 160px;
+}
+.texto{
+  max-width: 370px;
+}
+.texto:nth-child(2){
+  margin: 0 20px;
+}
+.text__titulo{
+  text-align: center;
+  font-family: "Water Brush", cursive;
+  font-size: 60px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+.text__parrafo{
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 350;
+}
+.informacion_extra{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 170px;
+  margin-bottom: 150px;
+}
+.informacion_extra__parrafo{
+  max-width: 500px;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 450;
+}
+.informacion_extra__link{
+  margin-top: 50px;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  color: #292b2e;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.informacion_extra__link:hover{
+  color: #5d5d5f;
+}
+.suscripcion{
+  grid-area: suscripcion;
+  background-color: #292b2e;
+}
+.contenido{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 220px;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+.contenido__titulo{
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+.contenido__parrado{
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.navegador_correo{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 210px;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+.email{
+  background-color: #fff;
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding: 0  0 0 20px;
+}
+.email__input{
+  outline: none;
+  border: none;
+  font-size: 15px;
+  background-color: transparent;
+}
+.email__boton{
+  background-color: #5d5d5f;
+  padding: 10.2px 20px;
+  border-radius: 30px;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  transition: 1s;
+}
+.email__boton:hover{
+  background-color: #8a8989;
+}
+.suscripcion__hojas{
+  position: absolute;
+  top: 3860px;
+  right: 0;
+  max-width: 200px;
+  width: 100%;
+  margin-left: 500px;
+}
+@media (max-width: 3350px){
+  .suscripcion__hojas{
+    width: 200px;
+    top: 4000px;
+  }
 }

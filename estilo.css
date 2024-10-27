@@ -294,6 +294,7 @@ body{
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 .pcja__pizza__imagen_piza{
   position: relative;
@@ -363,13 +364,14 @@ body{
 .suscripcion{
   grid-area: suscripcion;
   background-color: #292b2e;
+  position: relative;
 }
 .contenido{
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 220px;
+  margin-top: 260px;
   font-family: "Open Sans", sans-serif;
   color: #fff;
 }
@@ -377,22 +379,22 @@ body{
   font-size: 60px;
   margin-bottom: 30px;
 }
-.contenido__parrado{
-  max-width: 600px;
+.contenido__parrafo{
+  max-width: 800px;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 .navegador_correo{
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-bottom: 210px;
+  margin-bottom: 230px;
   align-items: center;
   font-family: "Open Sans", sans-serif;
 }
 .email{
   background-color: #fff;
-  max-width: 450px;
+  max-width: 680px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -407,7 +409,7 @@ body{
 }
 .email__boton{
   background-color: #5d5d5f;
-  padding: 10.2px 20px;
+  padding: 10.2px 30px;
   border-radius: 30px;
   font-size: 15px;
   text-decoration: none;
@@ -416,19 +418,65 @@ body{
   transition: 1s;
 }
 .email__boton:hover{
-  background-color: #8a8989;
+  background-color: #ccc;
 }
 .suscripcion__hojas{
   position: absolute;
-  top: 3860px;
-  right: 0;
-  max-width: 200px;
+  top: -70px;
   width: 100%;
-  margin-left: 500px;
+  height: 1000px;
+  right: 0;
 }
-@media (max-width: 3350px){
-  .suscripcion__hojas{
-    width: 200px;
-    top: 4000px;
-  }
+
+
+
+/*parte de vaca*/
+
+
+.redes{
+  grid-area: redes;
+  background-color: #d75959;
+  color: #292b2e;
+}
+.contenedor__informacion{
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  margin: 300px 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
+.paginas{
+  margin-right: 200px;
+}
+.paginas__titulo{
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.paginas__parrafo{
+  max-width: 400px;
+  margin-bottom: 20px;
+  font-weight: 350;
+}
+.red_social{
+  display: flex;
+  flex-direction: row;
+  
+}
+.red_social__imagen{
+  margin-right: 15px;
+}
+.contenedor__enlaces{
+  display: flex;
+  flex-direction:row;
+  margin-left: 200px;
+}
+.link{
+  
+}
+.link__lista{
+  
+}
+.link__texto{
+  list-style: none;
 }

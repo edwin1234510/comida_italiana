@@ -1,128 +1,256 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Italian Food</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Italian Food</title>
-  <link rel="stylesheet" href="estilo.css">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css" rel="stylesheet" />
-  <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
-    rel="stylesheet"/>
-</head>
-
-<body>
-  <div class="content_layout container">
-    <main class="inicio">
-      <div class="contenedor-buscador">
-        <div class="contenedor-buscador__boton"><span class="contenedor-buscador__texto">HOME</span></div>
-        <div class="contenedor-buscador__boton"><span class="contenedor-buscador__texto">MENU</span></div>
-        <div class="contenedor-buscador__boton"><span class="contenedor-buscador__texto">OUR STORY</span></div>
-        <div class="contenedor-buscador__boton"><span class="contenedor-buscador__texto">CONTACT US</span></div>
-        <nav class="navegador">
-          <input class="navegador__input" type="text">
-          <i class="navegador__icono ri-search-line"></i>
-        </nav>
-      </div>
-      <div class="contenedor-informacion">
-        <div class="nombre">
-          <img class="nombre__logo" src="/imagenes/logo.png" alt="">
-          <h1 class="nombre__titulo">Italian food</h1>
-          <h3 class="nombre__subtitulo">LOREMIPSUM DOLOR</h3>
-          <a class="nombre__boton" href="#">READ MORE</a>
-          <P class="nombre__parrafo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor consequuntur hic harum sapiente excepturi, possimus magni dolores voluptatum quod dicta.</P>
-        </div>
-        <div class="platillos">
-          <img class="platillos__imagen--segundo_plato" src="/imagenes/platillo2.png" alt="">
-          <img class="platillos__imagen--primer_plato" src="/imagenes/platillo1.png" alt="">
-        </div>
-      </div>
-      <img class="inicio__hojas" src="/imagenes/hojas1.png" alt="">
-    </main>
-    <main class="menu">
-      <div class="menu__encabezado">
-        <h1 class="menu__encabezado__titulo">Lorem Ipsum Dolor</h1>
-        <p class="menu__encabezado__parrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed quod ad asperiores explicabo odio modi, iusto non soluta maxime</p>
-      </div>
-      <div class="carta">
-        <div class="carta__plato">
-          <img class="carta__plato__imagen" src="/imagenes/platillo3.png" alt="">
-          <h3 class="carta__plato__titulo">Lorem ipsum</h3>
-          <p class="carta__plato__parrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores...</p>
-        </div>
-        <div class="carta__plato">
-          <img class="carta__plato__imagen" src="/imagenes/platillo4.png" alt="">
-          <h3 class="carta__plato__titulo">Lorem ipsum</h3>
-          <p class="carta__plato__parrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores...</p>
-        </div>
-        <div class="carta__plato">
-          <img class="carta__plato__imagen" src="/imagenes/platillo5.png" alt="">
-          <h3 class="carta__plato__titulo">Lorem ipsum</h3>
-          <p class="carta__plato__parrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores...</p>
-        </div>
-      </div>
-      <div class="carta__boton">
-        <a class="carta__boton__texto" href="#">SHOW MORE</a>
-      </div>
-    </main>
-    <main class="descripcion">
-      <div class="descripcion__contenido">
-        <h1 class="descripcion__contenido__titulo">Lorem Ipsum Dolor</h1>
-        <div class="caja">
-          <div class="caja_parrafo">
-            <p class="caja_parrafo__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quo eius sint veritatis! Eius quos nulla vero dignissimos vel numquam.</p>
+  <body>
+    <div class="content_layout container">
+      <main class="inicio">
+        <div class="contenedor-buscador">
+          <div class="contenedor-buscador__boton">
+            <span class="contenedor-buscador__texto">HOME</span>
           </div>
-          <div class="caja_parrafo">
-            <p class="caja_parrafo__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quo eius sint veritatis! Eius quos nulla vero dignissimos vel numquam.</p>
+          <div class="contenedor-buscador__boton">
+            <span class="contenedor-buscador__texto">MENU</span>
+          </div>
+          <div class="contenedor-buscador__boton">
+            <span class="contenedor-buscador__texto">OUR STORY</span>
+          </div>
+          <div class="contenedor-buscador__boton">
+            <span class="contenedor-buscador__texto">CONTACT US</span>
+          </div>
+          <nav class="navegador">
+            <input class="navegador__input" type="text" />
+            <i class="navegador__icono ri-search-line"></i>
+          </nav>
+        </div>
+        <div class="contenedor-informacion">
+          <div class="nombre">
+            <img class="nombre__logo" src="/imagenes/logo.png" alt="" />
+            <h1 class="nombre__titulo">Italian food</h1>
+            <h3 class="nombre__subtitulo">LOREMIPSUM DOLOR</h3>
+            <a class="nombre__boton" href="#">READ MORE</a>
+            <p class="nombre__parrafo">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              consequuntur hic harum sapiente excepturi, possimus magni dolores
+              voluptatum quod dicta.
+            </p>
+          </div>
+          <div class="platillos">
+            <img
+              class="platillos__imagen--segundo_plato"
+              src="/imagenes/platillo2.png"
+              alt=""
+            />
+            <img
+              class="platillos__imagen--primer_plato"
+              src="/imagenes/platillo1.png"
+              alt=""
+            />
           </div>
         </div>
+        <img class="inicio__hojas" src="/imagenes/hojas1.png" alt="" />
+      </main>
+      <main class="menu">
+        <div class="menu__encabezado">
+          <h1 class="menu__encabezado__titulo">Lorem Ipsum Dolor</h1>
+          <p class="menu__encabezado__parrafo">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed quod
+            ad asperiores explicabo odio modi, iusto non soluta maxime
+          </p>
         </div>
-    </main>
-    <main class="descuentos">
-    </main>
-    <main class="pizza">
-      <div class="cja__pizza">
-        <img class="cja__pizza__imagen_triangulo" src="/imagenes/pizza2.png" alt="">
-        <img class="cja__pizza__imagen_piza" src="/imagenes/pizaa1.png" alt="">
-      </div>
-    </main>
-    <main class="informacion">
-      <div class="informacion__container">
-        <div class="texto">
-          <h2 class="text__titulo">Lorem Ipsum</h2>
-          <p class="text__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro natus similique doloremque asperiores aperiam aliquam, sed tenetur nisi corrupti iste.</p>
+        <div class="carta">
+          <div class="carta__plato">
+            <img
+              class="carta__plato__imagen"
+              src="/imagenes/platillo3.png"
+              alt=""
+            />
+            <h3 class="carta__plato__titulo">Lorem ipsum</h3>
+            <p class="carta__plato__parrafo">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Asperiores...
+            </p>
+          </div>
+          <div class="carta__plato">
+            <img
+              class="carta__plato__imagen"
+              src="/imagenes/platillo4.png"
+              alt=""
+            />
+            <h3 class="carta__plato__titulo">Lorem ipsum</h3>
+            <p class="carta__plato__parrafo">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Asperiores...
+            </p>
+          </div>
+          <div class="carta__plato">
+            <img
+              class="carta__plato__imagen"
+              src="/imagenes/platillo5.png"
+              alt=""
+            />
+            <h3 class="carta__plato__titulo">Lorem ipsum</h3>
+            <p class="carta__plato__parrafo">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Asperiores...
+            </p>
+          </div>
         </div>
-        <div class="texto">
-          <h2 class="text__titulo">Lorem Ipsum</h2>
-          <p class="text__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro natus similique doloremque asperiores aperiam aliquam, sed tenetur nisi corrupti iste.</p>
+        <div class="carta__boton">
+          <a class="carta__boton__texto" href="#">SHOW MORE</a>
         </div>
-        <div class="texto">
-          <h2 class="text__titulo">Lorem Ipsum</h2>
-          <p class="text__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro natus similique doloremque asperiores aperiam aliquam, sed tenetur nisi corrupti iste.</p>
+      </main>
+      <main class="descripcion">
+        <div class="descripcion__contenido">
+          <h1 class="descripcion__contenido__titulo">Lorem Ipsum Dolor</h1>
+          <div class="caja">
+            <div class="caja_parrafo">
+              <p class="caja_parrafo__texto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus quo eius sint veritatis! Eius quos nulla vero
+                dignissimos vel numquam.
+              </p>
+            </div>
+            <div class="caja_parrafo">
+              <p class="caja_parrafo__texto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Doloribus quo eius sint veritatis! Eius quos nulla vero
+                dignissimos vel numquam.
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="informacion_extra">
-        <p class="informacion_extra__parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus excepturi deserunt, ducimus maiores corrupti fuga, nemo ullam nisi eius veritatis consequuntur esse qui ab incidunt molestiae enim! Distinctio, voluptas mollitia.</p>
-        <a class="informacion_extra__link" href="#">Lorem Ipsum</a>
-      </div>
-    </main>
-    <main class="suscripcion">
-      <div class="contenido">
-        <h1 class="contenido__titulo">Title Here</h1>
-        <p class="contenido__parrafo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex eveniet consequuntur fuga debitis quod beatae aperiam, maxime provident quos expedita quia? Labore dolores commodi nobis</p>
-      </div>
-      <div class="navegador_correo">
-        <nav class="email">
-          <input class="email__input" type="text" placeholder="Yuor Email">
-          <a class="email__boton" href="#">SUBSCRIBE</a>
-        </nav>
-      </div>
-      <img class="suscripcion__hojas" src="/imagenes/hoja3.png" alt="">
-    </main>
-    <main class="redes">
-    </main>
-  </div>
-</body>
-
+      </main>
+      <main class="descuentos"></main>
+      <main class="pizza">
+        <div class="cja__pizza">
+          <img
+            class="cja__pizza__imagen_triangulo"
+            src="/imagenes/pizza2.png"
+            alt=""
+          />
+          <img
+            class="cja__pizza__imagen_piza"
+            src="/imagenes/pizaa1.png"
+            alt=""
+          />
+        </div>
+      </main>
+      <main class="informacion">
+        <div class="informacion__container">
+          <div class="texto">
+            <h2 class="text__titulo">Lorem Ipsum</h2>
+            <p class="text__parrafo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              natus similique doloremque asperiores aperiam aliquam, sed tenetur
+              nisi corrupti iste.
+            </p>
+          </div>
+          <div class="texto">
+            <h2 class="text__titulo">Lorem Ipsum</h2>
+            <p class="text__parrafo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              natus similique doloremque asperiores aperiam aliquam, sed tenetur
+              nisi corrupti iste.
+            </p>
+          </div>
+          <div class="texto">
+            <h2 class="text__titulo">Lorem Ipsum</h2>
+            <p class="text__parrafo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+              natus similique doloremque asperiores aperiam aliquam, sed tenetur
+              nisi corrupti iste.
+            </p>
+          </div>
+        </div>
+        <div class="informacion_extra">
+          <p class="informacion_extra__parrafo">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
+            excepturi deserunt, ducimus maiores corrupti fuga, nemo ullam nisi
+            eius veritatis consequuntur esse qui ab incidunt molestiae enim!
+            Distinctio, voluptas mollitia.
+          </p>
+          <a class="informacion_extra__link" href="#">Lorem Ipsum</a>
+        </div>
+      </main>
+      <main class="suscripcion">
+        <div class="contenido">
+          <h1 class="contenido__titulo">Title Here</h1>
+          <p class="contenido__parrafo">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex eveniet
+            consequuntur fuga debitis quod beatae aperiam, maxime provident quos
+            expedita quia? Labore dolores commodi nobis
+          </p>
+        </div>
+        <div class="navegador_correo">
+          <nav class="email">
+            <input class="email__input" type="text" placeholder="Yuor Email" />
+            <a class="email__boton" href="#">SUBSCRIBE</a>
+          </nav>
+        </div>
+        <img class="suscripcion__hojas" src="/imagenes/hoja3.png" alt="" />
+      </main>
+      <main class="redes">
+        <div class="contenedor__informacion">
+          <div class="paginas">
+            <h3 class="paginas__titulo">Title Here</h3>
+            <p class="paginas__parrafo">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit,
+              inventore dolorem. Molestias sapiente laboriosam, eligendi nobis
+              quos dolore dolorem ipsam ipsum recusandae.
+            </p>
+            <div class="red_social">
+              <i class="red_social__imagen ri-instagram-line"></i>
+              <i class="red_social__imagen ri-facebook-fill"></i>
+              <i class="red_social__imagen ri-twitter-fill"></i>
+              <i class="red_social__imagen ri-whatsapp-line"></i>
+            </div>
+          </div>
+          <div class="contenedor__enlaces">
+            <div class="link">
+              <h3 class="link__titulo">About</h3>
+              <ul class="link__lista">
+                <li class="link__texto">History</li>
+                <li class="link__texto">Our team</li>
+                <li class="link__texto">Brand Guidelines</li>
+                <li class="link__texto">Terms & condition</li>
+                <li class="link__texto">Privacy Policy</li>
+              </ul>
+            </div>
+            <div class="link">
+              <h3 class="link__titulo">Services</h3>
+              <ul class="link__lista">
+                <li class="link__texto">How to Order</li>
+                <li class="link__texto">Our Product</li>
+                <li class="link__texto">Order Status</li>
+                <li class="link__texto">Promo</li>
+                <li class="link__texto">Pay ment Method</li>
+              </ul>
+            </div>
+            <div class="link">
+              <h3 class="link__titulo">Other</h3>
+              <ul class="link__lista">
+                <li class="link__texto">Contact Us</li>
+                <li class="link__texto">Help</li>
+                <li class="link__texto">Privacy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>

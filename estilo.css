@@ -562,7 +562,10 @@
 
 
 @media (width<800px){
-
+  .descuento_info{
+    margin-left: 0;
+    text-align: center;
+  }
   .menu__encabezado{
     width: 799px;
   }
@@ -682,7 +685,7 @@
     width: 600px;
   }
   .email{
-    width: 500px;
+    width: 450px;
   }
   .contenido{
     margin-top: 150px;
@@ -693,7 +696,7 @@
   .suscripcion__hojas{
     width: 800px;
     height: 770px;
-    top: -50px;
+    top: -40px;
   }
   .paginas{
     width: 200px;

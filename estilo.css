@@ -178,7 +178,6 @@
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
-  max-width: 670px;
   margin-top: 15px;
 }
 .carta {
@@ -560,17 +559,21 @@
   margin-bottom: 8px;
   font-weight: 350;
 }
-@media (width<1350px){
-  .inicio__hojas{
-    bottom: -210px;
-  }
-}
+
+
 @media (width<800px){
+
+  .menu__encabezado{
+    width: 799px;
+  }
+  .menu__encabezado__parrafo{
+    width: 600px;
+  }
   .contenedor-informacion{
     flex-direction: column;
   }
   .inicio__hojas{
-    bottom: -730px;
+    bottom: -780px;
     left: 225px;
     width: 550px;
   }
@@ -586,9 +589,7 @@
   }
   .nombre{
     padding-bottom: 50px;
-  }
-  .menu__encabezado{
-    max-width: 700px;
+    text-align: center;
   }
   .carta{
     flex-direction: column;
@@ -654,10 +655,10 @@
   }
   .cja__pizza__imagen_triangulo{
     width: 300px;
-    height: 300px;
+    height: 280px;
     position: absolute;
     left: 15px;
-    bottom: -140px;
+    bottom: -95px;
   }
   .informacion__container{
     flex-direction: column;
@@ -691,7 +692,7 @@
   }
   .suscripcion__hojas{
     width: 800px;
-    height: 800px;
+    height: 770px;
     top: -50px;
   }
   .paginas{

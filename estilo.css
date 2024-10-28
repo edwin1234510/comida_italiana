@@ -561,7 +561,7 @@
 }
 
 
-@media (width<800px){
+@media (width<850px){
   .descuento_info{
     margin-left: 0;
     text-align: center;
@@ -576,8 +576,8 @@
     flex-direction: column;
   }
   .inicio__hojas{
-    bottom: -780px;
-    left: 225px;
+    bottom: -770px;
+    right: 0;
     width: 550px;
   }
   .platillos__imagen--primer_plato{
@@ -596,12 +596,23 @@
   }
   .carta{
     flex-direction: column;
+    text-align: center;
+    justify-content: center;
     align-items: center;
-    max-width: 800px;
+    width: 100%;
   }
   .carta__plato{
     margin-bottom: 80px;
     margin-right: 0;
+    margin-left: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .carta__plato__titulo{
+    margin-left: 0;
+  }
+  .carta__plato__parrafo{
+    margin-left: 0;
   }
   .carta__boton{
     max-width: 800px;

@@ -593,8 +593,8 @@
     left: -20px;
   }
   .contenedor-buscador{
-    justify-content: start;
-    margin-left: 15%;
+    justify-content: center;
+    
   }
   .nombre{
     padding-bottom: 50px;

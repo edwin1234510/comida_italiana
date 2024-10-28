@@ -1,40 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Splash&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rock+Salt&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Splash&family=Water+Brush&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Splash&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Splash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rock+Salt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Splash&family=Water+Brush&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Splash&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* font-family: "Rock Salt", cursive; */ 
+/* font-family: "Rock Salt", cursive; */
 /* font-family: "Open Sans", sans-serif; */
 
-body{
+body {
   overflow-x: hidden;
 }
-.content_layout{
+.content_layout {
   display: grid;
   grid-template-areas:
-  'inicio'
-  'menu' 
-  'descripcion'
-  'descuentos'
-  'pizza'
-  'informacion'
-  'suscripcion'
-  'redes';
+    "inicio"
+    "menu"
+    "descripcion"
+    "descuentos"
+    "pizza"
+    "informacion"
+    "suscripcion"
+    "redes";
   height: 100vh;
   width: 100%;
 }
-.inicio{
+.inicio {
   grid-area: inicio;
   background-image: url(/imagenes/fondo.png);
   background-size: cover;
   padding-bottom: 50px;
 }
-.contenedor-buscador{
+.contenedor-buscador {
   width: 100%;
   height: 50px;
   display: flex;
@@ -44,7 +44,7 @@ body{
   align-items: center;
   gap: 20px;
 }
-.contenedor-buscador__boton{
+.contenedor-buscador__boton {
   height: 100%;
   color: white;
   display: flex;
@@ -55,17 +55,16 @@ body{
   border-bottom: 3px ridge transparent;
   cursor: pointer;
 }
-.contenedor-buscador__texto{
+.contenedor-buscador__texto {
   font-size: 15px;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
   cursor: pointer;
-
 }
-.contenedor-buscador__boton:hover{
+.contenedor-buscador__boton:hover {
   border-bottom: 3px ridge #fff;
 }
-.navegador{
+.navegador {
   margin-right: 70px;
   margin-left: 30px;
   background-color: #fff;
@@ -76,20 +75,20 @@ body{
   justify-content: end;
   width: 140px;
 }
-.navegador__input{
+.navegador__input {
   width: 85px;
   border: none;
   outline: none;
   font-family: "Open Sans", sans-serif;
 }
-.navegador__icono{
+.navegador__icono {
   margin-right: 13px;
   margin-left: 8px;
   font-size: 20px;
   font-weight: bold;
   color: #292b2e;
 }
-.contenedor-informacion{
+.contenedor-informacion {
   margin-left: 60px;
   color: white;
   margin-top: 120px;
@@ -98,23 +97,23 @@ body{
   justify-content: space-between;
   margin-bottom: 90px;
 }
-.nombre{
+.nombre {
   font-family: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
   width: 490px;
 }
-.nombre__logo{
+.nombre__logo {
   width: 110px;
   height: 90px;
 }
-.nombre__titulo{
+.nombre__titulo {
   font-family: "Water Brush", cursive;
   font-size: 120px;
   font-weight: 100;
   margin-top: 12px;
 }
-.nombre__subtitulo{
+.nombre__subtitulo {
   margin-top: 30px;
   margin-bottom: 40px;
   font-size: 20px;
@@ -122,7 +121,7 @@ body{
   letter-spacing: 2px;
   font-style: italic;
 }
-.nombre__boton{
+.nombre__boton {
   background-color: #fff;
   color: #292b2e;
   padding: 8px 20px;
@@ -133,58 +132,58 @@ body{
   text-align: center;
   transition: 0.5s;
 }
-.nombre__boton:hover{
+.nombre__boton:hover {
   background-color: #ccc;
 }
-.nombre__parrafo{
+.nombre__parrafo {
   max-width: 500px;
   width: 100%;
   margin-top: 20px;
   font-weight: 400;
 }
-.platillos{
+.platillos {
   display: flex;
 }
-.platillos__imagen--primer_plato{
+.platillos__imagen--primer_plato {
   position: relative;
   width: 600px;
   height: 600px;
   right: 150px;
 }
-.platillos__imagen--segundo_plato{
+.platillos__imagen--segundo_plato {
   position: relative;
   bottom: -500px;
   width: 250px;
   height: 250px;
 }
-.inicio__hojas{
+.inicio__hojas {
   position: absolute;
   bottom: -165px;
   right: 0px;
 }
-@media (max-width:1390px){
-  .inicio__hojas{
+@media (max-width: 1390px) {
+  .inicio__hojas {
     position: absolute;
     left: 828px;
   }
 }
-@media (max-width:497px){
-  .inicio__hojas{
+@media (max-width: 497px) {
+  .inicio__hojas {
     position: absolute;
     bottom: -180px;
     left: 930px;
     width: 450px;
     height: 400px;
   }
-  .inicio{
+  .inicio {
     padding-bottom: 0px;
   }
 }
-.menu{
+.menu {
   grid-area: menu;
   background-color: #fff;
 }
-.menu__encabezado{
+.menu__encabezado {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,51 +192,51 @@ body{
   width: 100%;
   text-align: center;
 }
-.menu__encabezado__titulo{
+.menu__encabezado__titulo {
   font-family: "Water Brush", cursive;
   font-size: 120px;
   font-weight: 100;
 }
-.menu__encabezado__parrafo{
+.menu__encabezado__parrafo {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
   max-width: 670px;
   margin-top: 15px;
 }
-.carta{
+.carta {
   display: flex;
   margin-top: 100px;
   justify-content: space-evenly;
 }
-.carta__plato{
+.carta__plato {
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
   color: #292b2e;
   margin: 0 20px;
 }
-.carta__plato__titulo{
+.carta__plato__titulo {
   margin-top: 20px;
   margin-bottom: 15px;
   font-size: 22px;
   margin-left: 40px;
 }
-.carta__plato__imagen{
+.carta__plato__imagen {
   width: 376px;
   height: 368px;
 }
-.carta__plato__parrafo{
+.carta__plato__parrafo {
   font-weight: 350;
   max-width: 376px;
   margin-left: 40px;
 }
-.carta__boton{
+.carta__boton {
   margin-top: 180px;
   width: 100%;
   text-align: center;
   margin-bottom: 80px;
 }
-.carta__boton__texto{
+.carta__boton__texto {
   background-color: #292b2e;
   padding: 15px 30px;
   text-decoration: none;
@@ -250,92 +249,91 @@ body{
   cursor: pointer;
   transition: 0.5s;
 }
-.carta__boton__texto:hover{
+.carta__boton__texto:hover {
   background-color: #5d5d5f;
 }
-.descripcion{
+.descripcion {
   grid-area: descripcion;
   background-color: #292b2e;
   color: #fff;
 }
-.descripcion__contenido{
+.descripcion__contenido {
   width: 100%;
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.descripcion__contenido__titulo{
+.descripcion__contenido__titulo {
   font-family: "Water Brush", cursive;
   font-size: 120px;
   font-weight: 100;
-
 }
-.caja{
+.caja {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: center;
   font-family: "Open Sans", sans-serif;
 }
-.caja_parrafo{
+.caja_parrafo {
   max-width: 480px;
-  margin: 30px 20px 0 20px ;
+  margin: 30px 20px 0 20px;
   font-size: 15px;
   font-weight: 300;
 }
-.pizza{
+.pizza {
   grid-area: pizza;
   background-image: url(/imagenes/fondo.png);
   background-size: cover;
   height: 720px;
 }
-.cja__pizza{
+.cja__pizza {
   margin-top: 50px;
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
-.pcja__pizza__imagen_piza{
+.pcja__pizza__imagen_piza {
   position: relative;
 }
-.cja__pizza__imagen_triangulo{
+.cja__pizza__imagen_triangulo {
   position: relative;
   margin-top: 480px;
   width: 380px;
   height: 330px;
   left: 260px;
 }
-.informacion{
+.informacion {
   grid-area: informacion;
   color: #292b2e;
 }
-.informacion__container{
+.informacion__container {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 160px;
 }
-.texto{
+.texto {
   max-width: 370px;
 }
-.texto:nth-child(2){
+.texto:nth-child(2) {
   margin: 0 20px;
 }
-.text__titulo{
+.text__titulo {
   text-align: center;
   font-family: "Water Brush", cursive;
   font-size: 60px;
   font-weight: 200;
   margin-bottom: 20px;
 }
-.text__parrafo{
+.text__parrafo {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 350;
 }
-.informacion_extra{
+.informacion_extra {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -344,13 +342,13 @@ body{
   margin-top: 170px;
   margin-bottom: 150px;
 }
-.informacion_extra__parrafo{
+.informacion_extra__parrafo {
   max-width: 500px;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   font-weight: 450;
 }
-.informacion_extra__link{
+.informacion_extra__link {
   margin-top: 50px;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
@@ -358,15 +356,15 @@ body{
   font-weight: 700;
   transition: 0.3s;
 }
-.informacion_extra__link:hover{
+.informacion_extra__link:hover {
   color: #5d5d5f;
 }
-.suscripcion{
+.suscripcion {
   grid-area: suscripcion;
   background-color: #292b2e;
   position: relative;
 }
-.contenido{
+.contenido {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -375,16 +373,16 @@ body{
   font-family: "Open Sans", sans-serif;
   color: #fff;
 }
-.contenido__titulo{
+.contenido__titulo {
   font-size: 60px;
   margin-bottom: 30px;
 }
-.contenido__parrafo{
+.contenido__parrafo {
   max-width: 800px;
   text-align: center;
   margin-bottom: 70px;
 }
-.navegador_correo{
+.navegador_correo {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -392,22 +390,22 @@ body{
   align-items: center;
   font-family: "Open Sans", sans-serif;
 }
-.email{
+.email {
   background-color: #fff;
   max-width: 680px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   border-radius: 30px;
-  padding: 0  0 0 20px;
+  padding: 0 0 0 20px;
 }
-.email__input{
+.email__input {
   outline: none;
   border: none;
   font-size: 15px;
   background-color: transparent;
 }
-.email__boton{
+.email__boton {
   background-color: #5d5d5f;
   padding: 10.2px 30px;
   border-radius: 30px;
@@ -417,13 +415,72 @@ body{
   color: #fff;
   transition: 1s;
 }
-.email__boton:hover{
+.email__boton:hover {
   background-color: #ccc;
 }
-.suscripcion__hojas{
+.suscripcion__hojas {
   position: absolute;
   top: -70px;
   width: 100%;
   height: 1000px;
   right: 0;
+}
+.redes {
+  grid-area: redes;
+  background-color: #fff;
+  color: #292b2e;
+}
+.contenedor__informacion {
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  margin: 300px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.paginas {
+}
+.paginas__titulo {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.paginas__parrafo {
+  max-width: 400px;
+  margin-bottom: 20px;
+  font-weight: 350;
+}
+.red_social {
+  display: flex;
+  flex-direction: row;
+}
+.red_social__imagen {
+  margin-right: 15px;
+  font-size: 25px;
+  padding: 8px;
+  background-color: #292b2e;
+  color: #fff;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.red_social__imagen:hover {
+  background-color: #5d5d5f;
+}
+.contenedor__enlaces {
+  display: flex;
+  flex-direction: row;
+}
+.link {
+  margin-right: 50px;
+}
+.link__lista {
+}
+.link__titulo {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+.link__texto {
+  list-style: none;
+  margin-bottom: 8px;
+  font-weight: 350;
 }

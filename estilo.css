@@ -143,7 +143,7 @@
 }
 .platillos__imagen--primer_plato {
   position: relative;
-  right: -40px;
+
 }
 .platillos__imagen--segundo_plato {
   position: absolute;
@@ -153,26 +153,9 @@
 .inicio__hojas {
   position: absolute;
   bottom: -165px;
-  right: 0px;
+  right: 50px;
 }
-@media (max-width: 1390px) {
-  .inicio__hojas {
-    position: absolute;
-    left: 828px;
-  }
-}
-@media (max-width: 497px) {
-  .inicio__hojas {
-    position: absolute;
-    bottom: -180px;
-    left: 930px;
-    width: 450px;
-    height: 400px;
-  }
-  .inicio {
-    padding-bottom: 0px;
-  }
-}
+
 .menu {
   grid-area: menu;
   background-color: var(--color_fondo);
@@ -576,6 +559,11 @@
   list-style: none;
   margin-bottom: 8px;
   font-weight: 350;
+}
+@media (width<1350px){
+  .inicio__hojas{
+    bottom: -210px;
+  }
 }
 @media (width<800px){
   .contenedor-informacion{

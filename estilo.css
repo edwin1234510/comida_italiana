@@ -481,7 +481,7 @@
   background-color: transparent;
 }
 .email__boton {
-  background-color: var(--color_fondo_oscuro);
+  background-color: var(--color_gris_oscuro);
   padding: 10.2px 30px;
   border-radius: 30px;
   font-size: 15px;
@@ -562,6 +562,9 @@
 
 
 @media (width<850px){
+  .inicio{
+    padding-bottom: 25px;
+  }
   .descuento_info{
     margin-left: 0;
     text-align: center;
@@ -576,9 +579,9 @@
     flex-direction: column;
   }
   .inicio__hojas{
-    bottom: -770px;
-    left: 400px;
-    width: 550px;
+    bottom: -650px;
+    width: 450px;
+    right: 10px;
   }
   .platillos__imagen--primer_plato{
     right: -130px;

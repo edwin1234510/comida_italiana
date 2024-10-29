@@ -152,8 +152,8 @@
 }
 .inicio__hojas {
   position: absolute;
-  bottom: -165px;
-  right: 0;
+  bottom: -320px;
+  right: 0px;
 }
 
 .menu {
@@ -577,11 +577,6 @@
   }
   .contenedor-informacion{
     flex-direction: column;
-  }
-  .inicio__hojas{
-    bottom: -690px;
-    width: 500px;
-    right: 10px;
   }
   .platillos__imagen--primer_plato{
     right: -130px;

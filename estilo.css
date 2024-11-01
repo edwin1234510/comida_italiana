@@ -207,10 +207,10 @@
   margin-left: 40px;
 }
 .carta__boton {
-  margin-top: 180px;
+  margin-top: 120px;
   width: 100%;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 .carta__boton__texto {
   background-color: var(--color_negro_texto);
@@ -511,7 +511,7 @@
 .contenedor__informacion {
   width: 100%;
   font-family: "Open Sans", sans-serif;
-  margin: 300px 0;
+  margin: 200px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -722,5 +722,11 @@
   .contenedor__enlaces{
     height: 284px;
   }
-  
+  .contenedor__informacion{
+    margin: 100px 0;
+  }
+  .informacion_extra{
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
 }

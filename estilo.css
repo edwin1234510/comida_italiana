@@ -730,3 +730,18 @@
     text-align: center;
   }
 }
+
+@media (width<970px){
+  .cja__pizza{
+    justify-content: right;
+  }
+  .cja__pizza__imagen_piza{
+    width: 764px;
+    height: 769px;
+  }
+  .cja__pizza__imagen_triangulo{
+    width: 388px;
+    height: 331px;
+    bottom: -99px;
+  }
+}

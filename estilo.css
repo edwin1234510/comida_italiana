@@ -298,7 +298,6 @@
 .descuento_info__titulo {
   font-size: 50px;
   font-weight: 650;
-  margin-left: 10px;
 }
 .descuento_info__parrafo {
   max-width: 500px;
@@ -315,17 +314,15 @@
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  margin-left: 10px;
   transition: 0.5s;
 }
 .descuento_info__boton:hover {
   background-color: var(--color_gris_oscuro);
 }
-.pizza {
+.pizza{
   grid-area: pizza;
   background-image: url(imagenes/fondo-min.png);
   background-size: cover;
-  height: 1100px;
   position: relative;
 }
 .pizza__hojas {
@@ -363,21 +360,19 @@
   margin-top: 40px;
 }
 .cja__pizza {
-  margin-top: 50px;
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
 }
-.pcja__pizza__imagen_piza {
+.cja__pizza__imagen_piza {
   position: relative;
+  bottom: -150px;
 }
 .cja__pizza__imagen_triangulo {
-  position: relative;
-  margin-top: 480px;
-  width: 380px;
-  height: 330px;
-  left: 260px;
+  position: absolute;
+  bottom: -130px;
+  right: 55%;
 }
 .informacion {
   grid-area: informacion;
@@ -415,7 +410,7 @@
   flex-direction: column;
   align-items: center;
   margin-top: 170px;
-  margin-bottom: 150px;
+  margin-bottom: 80px;
 }
 .informacion_extra__parrafo {
   max-width: 500px;
@@ -564,32 +559,40 @@
 }
 
 
-@media (width<850px){
+@media (max-width:1328px){
   .inicio{
     padding-bottom: 25px;
   }
-  .descuento_info{
-    margin-left: 0;
-    text-align: center;
-  }
-  .menu__encabezado{
-    width: 799px;
+  
+  .menu__encabezado__titulo{
+    margin-left: 70px;
+    margin-right: 70px;
   }
   .menu__encabezado__parrafo{
-    width: 600px;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  .menu__encabezado{
+    margin-top: 110px;
   }
   .contenedor-informacion{
     flex-direction: column;
+    align-items: center;
+  }
+  .platillos{
+    display: flex;
+    justify-content: center;
+    max-width: 650px;
   }
   .platillos__imagen--primer_plato{
-    right: -130px;
+    position: relative;
   }
-  .platillos__imagen--segundo_plato{
-    left: -20px;
+  .inicio__hojas{
+    right: -10%;
   }
   .contenedor-buscador{
-    justify-content: center;
-    
+    justify-content: end;
+
   }
   .nombre{
     padding-bottom: 50px;
@@ -615,66 +618,39 @@
   .carta__plato__parrafo{
     margin-left: 0;
   }
-  .carta__boton{
-    max-width: 800px;
-  }
-  .descripcion__contenido{
-    width: 800px;
-    height: 680px;
-  }
   .descripcion__boton{
     margin-top: 60px;
   }
   .primer_descuento{
-    flex-direction: column;
-    max-width: 800px;
     justify-content: center;
     align-items: center;
   }
   .descuento_info{
+    margin-left: 30px;
     margin-top: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    margin-right: 70px;
   }
   .descuento_info__boton{
     margin-bottom: 50px;
   }
-  .pizza{
-    height: none;
-  }
-  .contenido-pizza{
-    width: 800px;
-  }
   .contenido-pizza__titulo{
-    width: 400px;
     text-align: center;
-    font-size: 70px;
+    margin: 0 200px;
   }
   .contenido-pizza__parrafo{
-    max-width: 650px;
+    margin-left: 200px;
+    margin-right: 200px;
   }
   .pizza__hojas{
-    width: 700px;
-    height: 400px;
-    left: 30px;
+    width: 100%;
+    height: 600px;
+    right: 0px;
     top: -85px;
   }
-  .cja__pizza{
-    margin-top: 100px;
-  }
-  .cja__pizza__imagen_piza{
-    width: 650px;
-    height: 650px;
-    left: 0;
-  }
-  .cja__pizza__imagen_triangulo{
-    width: 300px;
-    height: 280px;
-    position: absolute;
-    left: 15px;
-    bottom: -95px;
-  }
+
   .informacion__container{
     flex-direction: column;
     align-items: center;
@@ -691,13 +667,21 @@
     align-items: center;
   }
   .caja_parrafo__texto{
-    width: 300px;
+    max-width: 700px;
+  }
+  .caja_parrafo:nth-child(1){
+    margin-left: 70px;
+  }
+  .caja_parrafo:nth-child(2){
+    margin-right: 70px;
   }
   .contenido__parrafo{
-    width: 600px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
   .email{
-    width: 450px;
+    margin-left: 100px;
+    margin-right: 100px;
   }
   .contenido{
     margin-top: 150px;
@@ -706,8 +690,8 @@
     margin-bottom: 150px;
   }
   .suscripcion__hojas{
-    width: 800px;
-    height: 770px;
+    
+    height: 780px;
     top: -40px;
   }
   .paginas{
@@ -728,5 +712,21 @@
   .informacion_extra{
     margin-top: 50px;
     margin-bottom: 80px;
+  }
+  .descripcion__contenido__titulo{
+    margin: 0 70px;
+  }
+}
+@media (width<1000px){
+  .primer_descuento{
+    flex-direction: column;
+  }
+  .descuento_info{
+    margin-left: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: none;
+    text-align: center;
   }
 }

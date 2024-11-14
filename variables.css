@@ -1,11 +1,13 @@
 :root {
-  --color_blanco_texto: white;
   --color_negro_texto: #292b2e;
+  --color_blanco_texto: white;
+  --color_blanco_navegadores: #fff;
+  --color_botones_blancos: #fff;
+  --color_botones_gris: #424243; 
   --color_gris_oscuro: #5d5d5f;
+  --color_boton_gris_claro: #807f7f;
   --color_gris_clarito: #ccc;
-  --color_blanco: white;
-  --color_navegador: #fff;
-  --color_fondo: #fff;
-  --color_fondo_oscuro: #292b2e;
-  --color_hover_boton: #8f8f8f;
+  --color_fondo_blanco: #fff;
+  --color_fondo_negro: #292b2e;
+  --color_iconos:#292b2e;
 }

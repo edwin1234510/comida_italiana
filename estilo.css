@@ -4,15 +4,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Splash&family=Water+Brush&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Splash&display=swap");
 @import url(variables.css);
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* { /*El selector universal que aplica los estilos a todos los elementos de la página*/
+  margin: 0; /*Elimina los márgenes predeterminados de todos los elementos*/
+  padding: 0;/*Elimina los espacios de relleno (padding) predeterminados de todos los elementos*/
+  box-sizing: border-box;/*Cambia el comportamiento del modelo de caja. Cuando se usa border-box, el ancho y la altura de un elemento incluyen el relleno y el borde, lo que facilita el manejo del tamaño de los elementos*/
 }
-/* font-family: "Rock Salt", cursive; */
-/* font-family: "Open Sans", sans-serif; */
+.comida_italiana{
+  color: var(--color_negro_texto); /* Es la clase de la etiqueta body. Establece el color del texto a un color negro definido en las variables CSS */
+}
 .content_layout {
-  display: grid;
+  display: grid; /* Usando un grid layout para organizar los componentes en la página */
   grid-template-areas:
     "inicio"
     "menu"
@@ -21,727 +22,731 @@
     "pizza"
     "informacion"
     "suscripcion"
-    "redes";
+    "redes"; /* Define las áreas del grid para cada sección */
   width: 100%;
-  height: 100vh;
+  height: 100vh;/* El layout ocupa el 100% del ancho y alto de la ventana */
 }
 .inicio {
-  grid-area: inicio;
-  background-image: url(imagenes/fondo-min.png);
-  background-size: cover;
-  padding-bottom: 50px;
+  grid-area: inicio;/* Define que esta sección ocupará el área llamada 'inicio' en el grid */
+  background-image: url(imagenes/fondo-min.png);/* Establece una imagen de fondo */
+  background-size: cover;/* La imagen se adapta para cubrir completamente el área */
+  padding-bottom: 50px;/* Añade espacio inferior */
 }
 .contenedor-buscador {
-  width: 100%;
-  height: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  margin-top: 40px;
-  align-items: center;
-  gap: 20px;
+  width: 100%;/* El contenedor ocupa todo el ancho */
+  height: 50px; /* Le damos un alto de 50 pixeles*/
+  display: flex; /* Flexbox para alinear los elementos */
+  flex-direction: row;/* Los elementos se alinean en fila */
+  justify-content: end; /* Alinea los elementos al final del contenedor */
+  margin-top: 40px; /* Tiene margen de separacion arriba de 40 pixeles*/
+  align-items: center;/* Alinea los elementos verticalmente al centro */
+  gap: 20px;/* Espacio entre los elementos */
 }
-.contenedor-buscador__boton {
-  height: 100%;
+.contenedor-buscador__boton--color_blanco {
+  height: 100%; /* Ocupa todo el ancho del contenedor*/
   display: flex;
-  color: var(--color_blanco_texto);
-  align-items: center;
-  justify-content: center;
-  padding: 0 12px;
-  transition: 0.5s;
-  border-bottom: 3px ridge transparent;
-  cursor: pointer;
+  color: var(--color_blanco_texto);/* Define el color del texto en blanco */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+  justify-content: center;/* Alinea los elementos horizontalmente al centro */
+  padding: 0 12px;/* Añade espacio a los lados del botón */
+  transition: 0.5s; /* Añade una transición suave */
+  border-bottom: 3px ridge transparent;/* Borde inferior transparente para efectos de hover */
+  cursor: pointer;/* Muestra el cursor como puntero cuando se pasa por encima */
 }
 .contenedor-buscador__texto {
-  font-size: 15px;
-  font-weight: 600;
-  font-family: "Open Sans", sans-serif;
-  cursor: pointer;
+  font-size: 15px; /* Le damos un tamño a la letra */
+  font-weight: 600; /* Le colocamos el grosor a la letra*/
+  font-family: "Open Sans", sans-serif; /* Utilizamos una tipografia */
+  cursor: pointer;/* Muestra el cursor como puntero cuando se pasa por encima */
 }
-.contenedor-buscador__boton:hover {
-  border-bottom: 3px ridge var(--color_blanco);
+.contenedor-buscador__boton--color_blanco:hover {
+  border-bottom: 3px ridge var(--color_blanco_texto); /* Cambia el color del borde al pasar el mouse */
 }
 .navegador {
-  margin-right: 70px;
-  margin-left: 30px;
-  background-color: var(--color_navegador);
-  height: 35px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  width: 140px;
+  margin-right: 70px; /* Le damos un margen de separacion a la izquierda*/
+  margin-left: 30px;/* Le damos un margen de separacion a la derecha*/
+  background-color: var(--color_blanco_navegadores); /* Establece el color de fondo del navegador */
+  height: 35px; /* Le establecemos una altura predeterminada*/
+  border-radius: 30px;/* Bordes redondeados */
+  display: flex; /* Volvemos el contenedor flexible*/
+  align-items: center;/* Alinea los elementos verticalmente al centro */
+  justify-content: end; /* Alinea los elementos al final del contenedor */
+  width: 140px; /* Le damos un ancho predeterminado*/
 }
 .navegador__input {
-  width: 85px;
-  border: none;
-  outline: none;
-  font-family: "Open Sans", sans-serif;
+  width: 85px;/* Le damos un ancho predeterminado*/
+  border: none;/* Elimina los bordes del input */
+  outline: none;/* Elimina el contorno cuando se enfoca */
+  font-family: "Open Sans", sans-serif;/* Establece la fuente */
 }
 .navegador__icono {
-  margin-right: 13px;
-  margin-left: 8px;
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--color_negro_texto);
+  margin-right: 13px; /* Tendra un margen de separacion*/
+  margin-left: 8px;/* Tendra un margen de separacion*/
+  font-size: 20px; /* Tamaño de la letra*/
+  font-weight: bold; /* especifica el peso o grueso de la letra*/
+  color: var(--color_negro_texto);/* Define el color de los iconos */
 }
 .contenedor-informacion {
-  color: var(--color_blanco_texto);
-  margin-top: 120px;
-  width: 100%;
-  margin-bottom: 90px;
-  display: flex;
-  justify-content: space-evenly;
-
+  margin-top: 120px; /*Añade un espacio de 120 píxeles en la parte superior del contenedor.*/
+  width: 100%;/*Hace que el contenedor ocupe todo el ancho disponible.*/
+  margin-bottom: 90px;/*Añade un espacio de 90 píxeles en la parte inferior del contenedor.*/
+  display: flex;/*Define un modelo de diseño basado en Flexbox, permitiendo que sus elementos hijos se distribuyan de manera flexible.*/
+  justify-content: space-evenly;/* Distribuye los elementos hijos del contenedor de manera equitativa, con espacio igual entre ellos.*/
 }
 .nombre {
-  font-family: "Open Sans", sans-serif;
-  display: flex;
-  flex-direction: column;
-  width: 600px;
+  font-family: "Open Sans", sans-serif;/*Define la fuente utilizada para el texto*/
+  display: flex;/*Define el modelo de diseño basado en Flexbox para organizar sus elementos hijos.*/
+  flex-direction: column;/*Alinea los elementos hijos en una columna vertical.*/
+  width: 600px;/*Define el ancho del contenedor en 600 píxeles.*/
 }
 .nombre__logo {
-  width: 110px;
-  height: 90px;
+  width: 110px;/*Establece el ancho de la imagen o el logotipo en 110 píxeles.*/
+  height: 90px;/*Establece la altura de la imagen o el logotipo en 90 píxeles.*/
 }
-.nombre__titulo {
-  font-family: "Water Brush", cursive;
-  font-size: 120px;
-  font-weight: 100;
-  margin-top: 12px;
+.nombre__titulo--blanco {
+  font-family: "Water Brush", cursive;/*Define la fuente del título*/
+  font-size: 120px;/*Establece el tamaño de la fuente en 120 píxeles.*/
+  font-weight: 100;/*Aplica un grosor de fuente ligero (100).*/
+  margin-top: 12px;/*Añade un espacio de 12 píxeles en la parte superior del título.*/
+  color: var(--color_blanco_texto);/*Aplica el color del texto */
 }
-.nombre__subtitulo {
-  margin-top: 30px;
-  margin-bottom: 40px;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  font-style: italic;
+.nombre__subtitulo--blanco {
+  margin-top: 30px; /* Añade un espacio de 30 píxeles en la parte superior.*/
+  margin-bottom: 40px;/*Añade un espacio de 40 píxeles en la parte inferior*/
+  font-size: 20px;/*Define el tamaño de la fuente en 20 píxeles*/
+  font-weight: 600;/*Aplica un grosor de fuente seminegrita*/
+  letter-spacing: 2px;/*Añade un espacio de 2 píxeles entre las letras*/
+  font-style: italic;/*Aplica un estilo de fuente en cursiva*/
+  color: var(--color_blanco_texto);/*Define el color del texto utilizando una variable*/
 }
-.nombre__boton {
-  background-color: var(--color_blanco);
-  color: var(--color_negro_texto);
-  padding: 8px 20px;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: 750;
-  max-width: 150px;
-  text-align: center;
-  transition: 0.5s;
+.nombre__boton--blanco_texto_negro {
+  background-color: var(--color_botones_blancos);/* Define el color de fondo del botón*/
+  color: var(--color_negro_texto);/*Define el color del texto en el botón*/
+  padding: 8px 20px;/* Aplica un espacio interno de 8 píxeles en la parte superior e inferior y de 20 píxeles en los lados.*/
+  text-decoration: none;/* Elimina cualquier subrayado del texto*/
+  border-radius: 30px;/*Aplica bordes redondeados al botón con un radio de 30 píxeles*/
+  font-weight: 750;/*Aplica un grosor de fuente bastante negrita*/
+  max-width: 150px;/*Define un ancho máximo de 150 píxeles*/
+  text-align: center;/* Alinea el texto al centro*/
+  transition: 0.5s;/* Añade una transición suave de 0.5 segundos para las propiedades que cambian.*/
 }
-.nombre__boton:hover {
-  background-color: var(--color_gris_clarito);
+.nombre__boton--blanco_texto_negro:hover {
+  background-color: var(--color_gris_clarito);/*Cambia el color de fondo a un tono gris claro cuando se pasa el ratón sobre el botón.*/
 }
-.nombre__parrafo {
-  max-width: 500px;
-  width: 100%;
-  margin-top: 20px;
-  font-weight: 400;
+.nombre__parrafo--blanco {
+  max-width: 500px;/* Define un ancho máximo de 500 píxeles*/
+  width: 100%;/*Hace que el párrafo ocupe todo el ancho disponible*/
+  margin-top: 20px;/*Añade un espacio de 20 píxeles en la parte superior.*/
+  font-weight: 400;/*Aplica un grosor de fuente normal*/
+  color: var(--color_blanco_texto);/*Define el color del texto*/
 }
 .platillos {
-  position: relative;
+  position: relative;/* Posiciona el contenedor de manera relativa, lo que permite que los elementos hijos con position: absolute se posicionen en relación con este contenedor*/
 }
 .platillos__imagen--primer_plato {
-  position: relative;
-
+  position: relative;/*Posiciona la imagen del primer plato de manera relativa, lo que puede ayudar a posicionar otros elementos en relación con ella*/
 }
 .platillos__imagen--segundo_plato {
-  position: absolute;
-  bottom: -140px;
-  right: 460px;
+  position: absolute;/*Posiciona la imagen del segundo plato de manera absoluta, lo que significa que se posiciona en relación con el contenedor más cercano con position: relative.*/
+  bottom: -140px;/*Mueve la imagen 140 píxeles hacia abajo desde la parte inferior del contenedor de referencia.*/
+  right: 460px;/*Mueve la imagen 460 píxeles hacia la izquierda desde el borde derecho del contenedor de referencia.*/
 }
 .inicio__hojas {
-  position: absolute;
-  bottom: -320px;
-  right: 0px;
+  position: absolute;/*Posiciona las hojas de manera absoluta, en relación con el contenedor más cercano que tenga position: relative.*/
+  bottom: -320px;/*Mueve las hojas 320 píxeles hacia abajo desde la parte inferior del contenedor de referencia.*/
+  right: 0px;/* Coloca las hojas al borde derecho del contenedor de referencia.*/
 }
 
 .menu {
-  grid-area: menu;
-  background-color: var(--color_fondo);
+  grid-area: menu;/* Define un área específica en un diseño de cuadrícula (grid) llamada 'menu' */
+  background-color: var(--color_fondo_blanco);/* Establece el color de fondo utilizando una variable CSS */
 }
 .menu__encabezado {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 70px;
-  width: 100%;
-  text-align: center;
+  display: flex; /* Utiliza Flexbox para distribuir los elementos dentro del encabezado */
+  justify-content: center;/* Alinea los elementos de forma horizontal al centro */
+  align-items: center;/* Alinea los elementos de forma vertical al centro */
+  flex-direction: column;/* Organiza los elementos en una columna (uno debajo del otro) */
+  margin-top: 70px;/* Agrega un margen superior de 70px */
+  width: 100%;/* Establece el ancho al 100% */
+  text-align: center;/* Centra el texto */
 }
-.menu__encabezado__titulo {
-  font-family: "Water Brush", cursive;
-  font-size: 120px;
-  font-weight: 100;
+.menu__encabezado__titulo{
+  font-family: "Water Brush", cursive; /* Define una fuente cursiva personalizada */
+  font-size: 120px;/* Tamaño de fuente grande para el título */
+  font-weight: 100; /* Hace que el texto sea muy delgado */
 }
-.menu__encabezado__parrafo {
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 15px;
+.menu__encabezado__parrafo{
+  font-family: "Open Sans", sans-serif;/* Define la fuente 'Open Sans' */
+  font-size: 18px;/* Tamaño de fuente mediano para el párrafo */
+  font-weight: 400;/* Peso de fuente normal */
+  margin-top: 15px;/* Espacio superior de 15px */
 }
 .carta {
-  display: flex;
-  margin-top: 100px;
-  justify-content: space-evenly;
+  display: flex; /* Utiliza Flexbox para distribuir los elementos de la carta */
+  margin-top: 100px; /* Margen superior de 100px */
+  justify-content: space-evenly;/* Distribuye los elementos de forma equitativa con espacio entre ellos */
 }
 .carta__plato {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 500;
-  color: var(--color_negro_texto);
-  margin: 0 20px;
+  font-family: "Open Sans", sans-serif; /* Usa la fuente 'Open Sans' */
+  font-weight: 500;/* Define un peso de fuente medio */
+
+  margin: 0 20px;/* Margen lateral de 20px a ambos lados */
 }
 .carta__plato__titulo {
-  margin-top: 20px;
-  margin-bottom: 15px;
-  font-size: 22px;
-  margin-left: 40px;
+  margin-top: 20px;/* Margen superior de 20px */
+  margin-bottom: 15px;/* Margen inferior de 15px */
+  font-size: 22px;/* Tamaño de fuente de 22px */
+  margin-left: 40px;/* Margen izquierdo de 40px */
 }
 .carta__plato__imagen {
-  width: 376px;
-  height: 368px;
+  width: 376px;/* Ancho de 376px */
+  height: 368px;/* Alto de 368px */
 }
 .carta__plato__parrafo {
-  font-weight: 350;
-  max-width: 376px;
-  margin-left: 40px;
+  font-weight: 350; /* Peso de fuente más ligero */
+  max-width: 376px;/* Ancho máximo de 376px */
+  margin-left: 40px;/* Margen izquierdo de 40px */
 }
 .carta__boton {
-  margin-top: 120px;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 120px;
+  margin-top: 120px;/* Margen superior de 120px */
+  width: 100%;/* Ancho completo */
+  text-align: center;/* Centra el texto */
+  margin-bottom: 120px;/* Margen inferior de 120px */
 }
-.carta__boton__texto {
-  background-color: var(--color_negro_texto);
-  padding: 15px 40px;
-  text-decoration: none;
-  color: var(--color_blanco_texto);
-  font-family: "Open Sans", sans-serif;
-  font-weight: 650;
-  font-size: 15px;
-  letter-spacing: 2px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: 0.5s;
+.carta__boton__texto--fondo_negro-texto_blanco {
+  background-color: var(--color_botones_gris); /* Color de fondo de los botones */
+  padding: 15px 40px;/* Relleno superior/inferior de 15px y lateral de 40px */
+  text-decoration: none; /* Elimina el subrayado del texto */
+  color: var(--color_blanco_texto);/* Color del texto en blanco */
+  font-family: "Open Sans", sans-serif; /* Fuente 'Open Sans' */
+  font-weight: 650;/* Peso de fuente ligeramente negrita */
+  font-size: 15px;/* Tamaño de fuente de 15px */
+  letter-spacing: 2px; /* Espaciado entre letras de 2px */
+  border-radius: 25px;/* Bordes redondeados de 25px */
+  cursor: pointer;/* Cambia el cursor a una mano cuando se pasa sobre el botón */
+  transition: 0.5s;/* Transición suave de 0.5 segundos para los cambios de estilo */
 }
-.carta__boton__texto:hover {
-  background-color: var(--color_gris_oscuro);
+.carta__boton__texto--fondo_negro-texto_blanco:hover {
+  background-color: var(--color_gris_oscuro);/* Cambia el color de fondo al pasar el cursor */
 }
 .descripcion {
-  grid-area: descripcion;
-  background-color: var(--color_fondo_oscuro);
-  color: var(--color_blanco_texto);
+  grid-area: descripcion;/* Define un área específica en un diseño de cuadrícula (grid) llamada 'descripcion' */
+  background-color: var(--color_fondo_negro); /* Color de fondo negro */
 }
 .descripcion__contenido {
-  width: 100%;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 70px;
+  width: 100%;/* Ancho completo */
+  text-align: center; /* Texto centrado */
+  margin-top: 50px;/* Margen superior de 50px */
+  margin-bottom: 70px; /* Margen inferior de 70px */
 }
-.descripcion__contenido__titulo {
-  font-family: "Water Brush", cursive;
-  font-size: 120px;
-  font-weight: 100;
+.descripcion__contenido__titulo--blanco {
+  font-family: "Water Brush", cursive; /* Fuente cursiva personalizada */
+  font-size: 120px; /* Tamaño grande de la fuente */
+  font-weight: 100;/* Texto delgado */
+  color: var(--color_blanco_texto);/* Color del texto en blanco, usando una variable */
 }
 .caja {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
-  font-family: "Open Sans", sans-serif;
+  display: flex;/* Utiliza Flexbox para organizar los elementos */
+  flex-direction: row; /* Elementos en fila (horizontal) */
+  width: 100%;/* Ancho completo */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  font-family: "Open Sans", sans-serif; /* Fuente 'Open Sans' */
 }
-.caja_parrafo {
-  max-width: 480px;
-  margin: 50px 20px 0 20px;
-  font-size: 15px;
-  font-weight: 300;
-  text-align: start;
+.caja_parrafo{
+  max-width: 480px; /* Ancho máximo de 480px */
+  margin: 50px 20px 0 20px; /* Margen superior de 50px y margen lateral de 20px */
+  font-size: 15px;/* Tamaño de fuente de 15px */
+  font-weight: 300; /* Texto ligero */
+  text-align: start;/* Texto alineado a la izquierda */
+}
+.caja_parrafo__texto--blanco{
+  color: var(--color_blanco_texto);/* Color del texto en blanco */
 }
 .descripcion__boton {
-  font-family: "Open Sans", sans-serif;
-  margin-top: 100px;
+  font-family: "Open Sans", sans-serif; /* Fuente 'Open Sans' */
+  margin-top: 100px;/* Margen superior de 100px */
 }
-.boton__link {
-  padding: 12px 40px;
-  background-color: var(--color_blanco);
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: 750;
-  color: #292b2e;
-  transition: 0.5s;
+.boton__link--blanco-texto_negro {
+  padding: 12px 40px;/* Relleno superior/inferior de 12px y lateral de 40px */
+  color: var(--color_negro_texto); /* Color del texto en negro */
+  background-color: var(--color_botones_blancos);/* Color de fondo blanco */
+  border-radius: 20px;/* Bordes redondeados de 20px */
+  text-decoration: none;/* Sin subrayado */
+  font-weight: 750;/* Texto negrita */
+  transition: 0.5s;/* Transición suave de 0.5 segundos */
 }
-.boton__link:hover {
-  background-color: var(--color_gris_clarito);
+.boton__link--blanco-texto_negro:hover {
+  background-color: var(--color_gris_clarito);/* Cambia el color de fondo al pasar el cursor */
 }
 .descuentos {
-  grid-area: descuentos;
-  background-color: var(--color_fondo);
+  grid-area: descuentos; /* Define un área en un diseño de cuadrícula */
+  background-color: var(--color_fondo_blanco);/* Color de fondo blanco */
 }
 .primer_descuento {
-  margin-top: 80px;
-  justify-content: center;
+  margin-top: 80px; /* Margen superior de 80px */
+  justify-content: center;/* Centra los elementos horizontalmente */
 }
 .primer_descuento__imagen {
-  max-width: 620px;
+  max-width: 620px;/* Ancho máximo de 620px */
 }
 .primer_descuento {
-  max-width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  max-width: 100%;/* Ancho máximo completo */
+  display: flex; /* Utiliza Flexbox */
+  flex-direction: row;/* Elementos en fila (horizontal) */
+  justify-content: space-evenly; /* Espacio uniforme entre los elementos */
 }
 .descuento_info {
-  font-family: "Open Sans", sans-serif;
-  margin-top: 110px;
+  font-family: "Open Sans", sans-serif;/* Fuente 'Open Sans' */
+  margin-top: 110px;/* Margen superior de 110px */
 }
 .descuento_info__titulo {
-  font-size: 50px;
-  font-weight: 650;
+  font-size: 50px;/* Tamaño de fuente de 50px */
+  font-weight: 650;/* Texto seminegrita */
 }
 .descuento_info__parrafo {
-  max-width: 500px;
-  font-size: 20px;
-  font-weight: 400;
-  margin-top: 25px;
-  margin-bottom: 45px;
+  max-width: 500px; /* Ancho máximo de 500px */
+  font-size: 20px;/* Tamaño de fuente de 20px */
+  font-weight: 400;/* Peso de fuente normal */
+  margin-top: 25px;/* Margen superior de 25px */
+  margin-bottom: 45px;/* Margen inferior de 45px */
 }
-.descuento_info__boton {
-  padding: 10px 30px;
-  letter-spacing: 3px;
-  background-color: var(--color_negro_texto);
-  color: var(--color_blanco_texto);
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.5s;
+.descuento_info__boton--negro-texto_blanco {
+  padding: 10px 30px; /* Relleno superior/inferior de 10px y lateral de 30px */
+  letter-spacing: 3px;/* Espaciado entre letras de 3px */
+  background-color: var(--color_botones_gris);/* Color de fondo gris */
+  color: var(--color_blanco_texto); /* Color del texto en blanco */
+  border-radius: 30px;/* Bordes redondeados de 30px */
+  text-decoration: none;/* Sin subrayado */
+  font-weight: 600; /* Texto negrita ligera */
+  transition: 0.5s;/*sición suave de 0.5 segundos */
 }
-.descuento_info__boton:hover {
-  background-color: var(--color_gris_oscuro);
+.descuento_info__boton--negro-texto_blanco:hover {
+  background-color: var(--color_gris_oscuro); /* Cambia el color de fondo al pasar el cursor */
 }
 .pizza{
-  grid-area: pizza;
-  background-image: url(imagenes/fondo-min.png);
-  background-size: cover;
-  position: relative;
+  grid-area: pizza;/* Define un área en un diseño de cuadrícula */
+  background-image: url(imagenes/fondo-min.png);/* Imagen de fondo */
+  background-size: cover;/* La imagen cubre todo el contenedor */
+  position: relative; /* Posicionamiento relativo */
 }
 .pizza__hojas {
-  position: absolute;
-  right: 0;
-  top: -168px;
-  width: 100%;
-  height: 850px;
+  position: absolute; /* Posicionamiento absoluto */
+  right: 0;/* Alineado a la derecha */
+  top: -168px;/* Posicionado 168px hacia arriba */
+  width: 100%;/* Ancho completo */
+  height: 850px;/* Altura de 850px */
 }
 .contenido-pizza {
-  width: 100%;
-  color: var(--color_blanco_texto);
-  font-family: "Open Sans", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
+  width: 100%;/* Ancho completo */
+  font-family: "Open Sans", sans-serif;/* Fuente 'Open Sans' */
+  display: flex;/* Utiliza Flexbox */
+  flex-direction: column;/* Elementos en columna (vertical) */
+  align-items: center; /* Centra los elementos horizontalmente */
+  margin-top: 100px;/* Margen superior de 100px */
 }
-.contenido-pizza__titulo {
-  font-family: "Water Brush", cursive;
-  font-size: 95px;
-  font-weight: 500;
+.contenido-pizza__titulo--blanco {
+  font-family: "Water Brush", cursive;/* Fuente cursiva personalizada */
+  font-size: 95px;/* Tamaño de fuente grande */
+  font-weight: 500;/* Texto seminegrita */
+  color: var(--color_blanco_texto); /* Color del texto en blanco */
 }
-.contenido-pizza__parrafo {
-  max-width: 800px;
-  text-align: center;
-  margin-top: 30px;
-  font-size: 20px;
-  font-weight: 300;
+.contenido-pizza__parrafo--blanco {
+  max-width: 800px;/* Limita el ancho del párrafo a 800px */
+  text-align: center; /* Centra el texto del título dentro del contenedor */
+  margin-top: 30px;/* Añade un espacio superior de 30px */
+  font-size: 20px;/* Define el tamaño de la fuente como 20px */
+  font-weight: 300;/* Define el peso de la fuente como 300, dándole un grosor ligero */
+  color: var(--color_blanco_texto);/* Aplica el color blanco al texto */
 }
-.contenido-pizza__linea {
-  width: 130px;
-  height: 8px;
-  background-color: var(--color_blanco);
-  margin-top: 40px;
+.contenido-pizza__linea--blanco {
+  width: 130px;/* Define el ancho de la línea como 130px */
+  height: 8px;/* Define la altura de la línea como 8px */
+  background-color: var(--color_blanco_texto); /* Aplica el color blanco a la línea */
+  margin-top: 40px;/* Añade un espacio superior de 40px */
 }
 .cja__pizza {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+  display: flex;/* Usa el modelo de flexbox para organizar los elementos */
+  width: 100%;/* Hace que el contenedor ocupe el 100% del ancho disponible */
+  justify-content: center;/* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
 }
 .cja__pizza__imagen_piza {
-  position: relative;
-  bottom: -150px;
+  position: relative; /* Define la posición relativa para permitir la colocación de elementos hijos de forma absoluta */
+  bottom: -150px; /* Desplaza la imagen hacia abajo 150px respecto a su posición original */
 }
 .cja__pizza__imagen_triangulo {
-  position: absolute;
-  bottom: -130px;
-  right: 55%;
+  position: absolute;/* Establece la posición absoluta para el triángulo */
+  bottom: -130px;/* Desplaza el triángulo hacia abajo 130px respecto a su posición original */
+  right: 55%;/* Coloca el triángulo a la derecha, desplazado un 55% desde el borde derecho del contenedor */
 }
 .informacion {
-  grid-area: informacion;
-  color: var(--color_fondo_oscuro);
+  grid-area: informacion;/* Define la ubicación del área de grid para este elemento */
+  background-color: var(--color_fondo_blanco); /* Aplica el color de fondo blanco al contenedor */
 }
 .informacion__container {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 160px;
+  width: 100%; /* Define el ancho del contenedor como el 100% */
+  display: flex; /* Usa flexbox para organizar los elementos */
+  flex-direction: row;/* Organiza los elementos en fila */
+  justify-content: center;/* Centra los elementos horizontalmente */
+  margin-top: 160px;/* Añade un espacio superior de 160px */
 }
 .texto {
-  max-width: 370px;
+  max-width: 370px; /* Limita el ancho del contenedor a 370px */
 }
 .texto:nth-child(2) {
-  margin: 0 20px;
+  margin: 0 20px; /* Añade márgenes laterales de 20px solo al segundo hijo */
 }
 .text__titulo {
-  text-align: center;
-  font-family: "Water Brush", cursive;
-  font-size: 60px;
-  font-weight: 200;
-  margin-bottom: 20px;
+  text-align: center; /* Centra el título dentro de su contenedor */
+  font-family: "Water Brush", cursive;/* Aplica la fuente personalizada 'Water Brush' */
+  font-size: 60px;/* Define el tamaño de la fuente en 60px */
+  font-weight: 200;/* Define un peso de fuente ligero */
+  margin-bottom: 20px; /* Añade un espacio inferior de 20px */
 }
 .text__parrafo {
-  font-family: "Open Sans", sans-serif;
-  font-size: 15px;
-  font-weight: 350;
+  font-family: "Open Sans", sans-serif;/* Usa la fuente 'Open Sans' para el párrafo */
+  font-size: 15px;/* Define el tamaño de la fuente como 15px */
+  font-weight: 350;/* Establece un peso medio para la fuente */
 }
 .informacion_extra {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 170px;
-  margin-bottom: 80px;
+  width: 100%;/* Define el ancho del contenedor como el 100% */
+  display: flex;/* Usa flexbox para organizar los elementos */
+  justify-content: center;/* Centra los elementos horizontalmente */
+  flex-direction: column;/* Organiza los elementos en columna */
+  align-items: center;/* Centra los elementos verticalmente */
+  margin-top: 170px; /* Añade un espacio superior de 170px */
+  margin-bottom: 80px;/* Añade un espacio inferior de 80px */
 }
 .informacion_extra__parrafo {
-  max-width: 500px;
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 450;
+  max-width: 500px;/* Limita el ancho del párrafo a 500px */
+  text-align: center;/* Centra el texto dentro del contenedor */
+  font-family: "Open Sans", sans-serif; /* Usa la fuente 'Open Sans' */
+  font-weight: 450;/* Establece un peso de fuente medio-alto */
 }
 .informacion_extra__link {
-  margin-top: 50px;
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-  color: var(--color_negro_texto);
-  font-weight: 700;
-  transition: 0.3s;
+  margin-top: 50px;/* Añade un espacio superior de 50px */
+  text-decoration: none;/* Elimina la decoración del enlace */
+  font-family: "Open Sans", sans-serif;/* Usa la fuente 'Open Sans' */
+  color: var(--color_negro_texto);/* Aplica el color negro al texto */
+  font-weight: 700;/* Establece un peso de fuente fuerte */
+  transition: 0.3s;/* Aplica una transición suave en 0.3 segundos */
 }
 .informacion_extra__link:hover {
-  color: var(--color_gris_oscuro);
+  color: var(--color_gris_oscuro);/* Cambia el color a gris oscuro al hacer hover */
 }
 .suscripcion {
-  grid-area: suscripcion;
-  background-color: var(--color_negro_texto);
-  position: relative;
+  grid-area: suscripcion;/* Define la ubicación del área de grid para este elemento */
+  background-color: var(--color_fondo_negro);/* Aplica el color de fondo negro al contenedor */
+  position: relative;/* Define la posición relativa para el contenedor */
 }
 .contenido {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 260px;
-  font-family: "Open Sans", sans-serif;
-  color: var(--color_blanco_texto);
+  width: 100%;/* Define el ancho del contenedor como el 100% */
+  display: flex;/* Usa flexbox para organizar los elementos */
+  flex-direction: column;/* Organiza los elementos en columna */
+  align-items: center; /* Centra los elementos verticalmente */
+  margin-top: 260px;/* Añade un espacio superior de 260px */
+  font-family: "Open Sans", sans-serif;/* Usa la fuente 'Open Sans' */
+  color: var(--color_blanco_texto); /* Aplica el color blanco al texto */
 }
-.contenido__titulo {
-  font-size: 60px;
-  margin-bottom: 30px;
+.contenido__titulo--blanco {
+  font-size: 60px;/* Define el tamaño de la fuente como 60px */
+  margin-bottom: 30px; /* Añade un espacio inferior de 30px */
+  color: var(--color_blanco_texto);/* Aplica el color blanco al texto */
 }
-.contenido__parrafo {
-  max-width: 800px;
-  text-align: center;
-  margin-bottom: 70px;
+.contenido__parrafo--blanco {
+  max-width: 800px;/* Limita el ancho del párrafo a 800px */
+  text-align: center;/* Centra el texto dentro del contenedor */
+  margin-bottom: 70px;/* Añade un espacio inferior de 70px */
+  color: var(--color_blanco_texto);/* Aplica el color blanco al texto */
 }
 .navegador_correo {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-bottom: 230px;
-  align-items: center;
-  font-family: "Open Sans", sans-serif;
+  display: flex;/* Usa flexbox para organizar los elementos */
+  width: 100%; /* Define el ancho del contenedor como el 100% */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  margin-bottom: 230px;/* Añade un espacio inferior de 230px */
+  align-items: center;/* Centra los elementos verticalmente */
+  font-family: "Open Sans", sans-serif;/* Usa la fuente 'Open Sans' */
 }
 .email {
-  background-color: var(--color_fondo);
-  max-width: 680px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 30px;
-  padding: 0 0 0 20px;
+  background-color: var(--color_blanco_navegadores);/* Aplica un color de fondo blanco a la barra de correo */
+  max-width: 680px; /* Limita el ancho del contenedor a 680px */
+  width: 100%;/* Define el ancho del contenedor como el 100% */
+  display: flex;/* Usa flexbox para organizar los elementos */
+  justify-content: space-between;/* Distribuye los elementos con espacio entre ellos */
+  border-radius: 30px;/* Redondea los bordes del contenedor */
+  padding: 0 0 0 20px;/* Añade un relleno a la izquierda de 20px */
 }
 .email__input {
-  outline: none;
-  border: none;
-  font-size: 15px;
-  background-color: transparent;
-  z-index: 2;
+  outline: none;/* Elimina el borde de enfoque del campo de entrada */
+  border: none;/* Elimina el borde del campo de entrada */
+  font-size: 15px;/* Define el tamaño de la fuente como 15px */
+  background-color: transparent; /* Establece el fondo como transparente */
+  z-index: 2; /* Establece un nivel de apilamiento superior */
 }
-.email__boton {
-  background-color: var(--color_gris_oscuro);
-  padding: 10.2px 30px;
-  border-radius: 30px;
-  font-size: 15px;
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--color_blanco_texto);
-  transition: 1s;
-  z-index: 2;
+.email__boton--gris {/* Botón de color gris utilizado en la sección de suscripción */
+  background-color: var(--color_boton_gris_claro);/* Color de fondo gris claro */
+  padding: 10.2px 30px; /* Espaciado interno: 10.2px arriba/abajo, 30px a los lados */
+  border-radius: 30px;/* Bordes redondeados */
+  font-size: 15px;/* Tamaño de la fuente */
+  text-decoration: none;/* Sin subrayado en el texto */
+  font-weight: 600;/* Grosor medio del texto */
+  color: var(--color_blanco_texto);/* Color de texto blanco */
+  transition: 1s;/* Transición de 1 segundo para efectos de cambio */
+  z-index: 2; /* Posiciona el botón encima de otros elementos */
 }
-.email__boton:hover {
-  background-color: var(--color_hover_boton);
+.email__boton--gris:hover {/* Cambio de color de fondo al pasar el ratón por encima */
+  background-color: var(--color_gris_oscuro);/* Cambia a gris oscuro */
 }
-.suscripcion__hojas {
-  position: absolute;
-  top: -70px;
-  width: 100%;
-  height: 1000px;
-  right: 0;
-  z-index: 1;
+.suscripcion__hojas {/* Hojas decorativas en la sección de suscripción */
+  position: absolute; /* Posicionamiento absoluto */
+  top: -70px;/* A 70 píxeles hacia arriba desde el contenedor */
+  width: 100%;/* Ancho completo */
+  height: 1000px; /* Altura de 1000 píxeles */
+  right: 0; /* Alineado al borde derecho */
+  z-index: 1;/* Posiciona las hojas detrás de otros elementos */
 }
-.redes {
-  grid-area: redes;
-  background-color: var(--color_fondo);
-  color: var(--color_negro_texto);
+.redes {/* Sección que contiene las redes sociales */
+  grid-area: redes;/* Define el área del grid donde se ubica */
+  background-color: var(--color_fondo_blanco); /* Color de fondo blanco */
 }
-.contenedor__informacion {
-  width: 100%;
-  font-family: "Open Sans", sans-serif;
-  margin: 200px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.contenedor__informacion {/* Contenedor de información con disposición en fila */
+  width: 100%;/* Ancho completo */
+  font-family: "Open Sans", sans-serif;/* Fuente personalizada */
+  margin: 200px 0;/* Margen superior e inferior de 200 píxeles */
+  display: flex;/* Uso de Flexbox */
+  flex-direction: row;/* Elementos organizados en fila */
+  justify-content: space-around; /* Espacio uniforme entre los elementos */
 }
-.paginas {
+.paginas { /* Estilos específicos para el contenedor de páginas */
 }
-.paginas__titulo {
-  margin-bottom: 20px;
-  font-weight: 500;
+.paginas__titulo {/* Título de las páginas */
+  margin-bottom: 20px;/* Espacio inferior de 20 píxeles */
+  font-weight: 500;/* Grosor medio de la fuente */
 }
-.paginas__parrafo {
-  max-width: 400px;
-  margin-bottom: 20px;
-  font-weight: 350;
+.paginas__parrafo {/* Párrafo con un ancho máximo */
+  max-width: 400px;/* Ancho máximo de 400 píxeles */
+  margin-bottom: 20px;/* Espacio inferior de 20 píxeles */
+  font-weight: 350;/* Grosor ligero de la fuente */
 }
-.red_social {
-  display: flex;
-  flex-direction: row;
+.red_social {/* Contenedor de iconos de redes sociales */
+  display: flex; /* Uso de Flexbox */
+  flex-direction: row;/* Organiza los iconos en fila */
 }
-.red_social__imagen {
-  margin-right: 15px;
-  font-size: 25px;
-  padding: 8px;
-  background-color: var(--color_negro_texto);
-  color: var(--color_blanco_texto);
-  border-radius: 50%;
-  transition: 0.5s;
-  cursor: pointer;
+.red_social__imagen--fondo_negro{/* Iconos de redes sociales con fondo negro y diseño circular */
+  margin-right: 15px;/* Espacio a la derecha de 15 píxeles */
+  font-size: 25px; /* Tamaño del icono */
+  padding: 8px;/* Espaciado interno de 8 píxeles */
+  background-color: var(--color_iconos);/* Color de fondo */
+  color: var(--color_blanco_texto);/* Color de texto blanco */
+  border-radius: 50%;/* Iconos redondeados */
+  transition: 0.5s;/* Transición de 0.5 segundos para efectos */
+  cursor: pointer;/* Cambia el cursor a un puntero */
 }
-.red_social__imagen:hover {
-  background-color: var(--color_gris_oscuro);
+.red_social__imagen--fondo_negro:hover {/* Cambio de color de fondo al pasar el ratón por encima */
+  background-color: var(--color_gris_oscuro); /* Cambia a gris oscuro */
 }
-.contenedor__enlaces {
-  display: flex;
-  flex-direction: row;
+.contenedor__enlaces {/* Contenedor de enlaces organizados en fila */
+  display: flex;/* Uso de Flexbox */
+  flex-direction: row;/* Organiza los enlaces en fila */
 }
-.link {
-  margin-right: 50px;
+.link {/* Estilo individual de los enlaces */
+  margin-right: 50px; /* Espacio a la derecha de 50 píxeles */
 }
-.link__lista {
+.link__lista {/* Lista de enlaces */
 }
-.link__titulo {
-  margin-bottom: 15px;
-  font-weight: 500;
+.link__titulo {/* Título de los enlaces */
+  margin-bottom: 15px;/* Espacio inferior de 15 píxeles */
+  font-weight: 500;/* Grosor medio de la fuente */
 }
-.link__texto {
-  list-style: none;
-  margin-bottom: 8px;
-  font-weight: 350;
+.link__texto {/* Texto de los enlaces */
+  list-style: none;/* Elimina el estilo de lista predeterminado */
+  margin-bottom: 8px;/* Espacio inferior de 8 píxeles */
+  font-weight: 350;/* Grosor ligero de la fuente */
 }
 
-
-@media (max-width:1328px){
+@media (max-width:1328px){/* Estilos para pantallas con un ancho máximo de 1328px */
   .inicio{
-    padding-bottom: 25px;
+    padding-bottom: 25px;/* Espaciado inferior adicional */
   }
   
-  .menu__encabezado__titulo{
-    margin-left: 70px;
-    margin-right: 70px;
+  .menu__encabezado__{
+    margin-left: 70px;/* Margen izquierdo de 70px */
+    margin-right: 70px;/* Margen derecho de 70px */
   }
   .menu__encabezado__parrafo{
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 70px; /* Ajuste de margen izquierdo */
+    margin-right: 70px;/* Ajuste de margen derecho */
   }
   .menu__encabezado{
-    margin-top: 110px;
+    margin-top: 110px;/* Espaciado superior adicional */
   }
   .contenedor-informacion{
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Cambia la disposición a columna */
+    align-items: center;/* Centra los elementos */
   }
   .platillos{
-    display: flex;
-    justify-content: center;
-    max-width: 650px;
+    display: flex;/* Usa Flexbox */
+    justify-content: center;/* Centra los elementos */
+    max-width: 650px; /* Ancho máximo de 650px */
   }
   .platillos__imagen--primer_plato{
-    position: relative;
+    position: relative; /* Posicionamiento relativo */
   }
   .inicio__hojas{
-    right: -10%;
+    right: -10%;/* Ajuste de posición hacia la derecha */
   }
   .contenedor-buscador{
-    justify-content: end;
+    justify-content: end; /* Alinea el buscador al final */
 
   }
   .nombre{
-    padding-bottom: 50px;
-    text-align: center;
+    padding-bottom: 50px;/* Espaciado inferior */
+    text-align: center; /* Centra el texto */
   }
   .carta{
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    flex-direction: column;/* Disposición en columna */
+    text-align: center;/* Centra el texto */
+    justify-content: center; /* Centra los elementos */
+    align-items: center; /* Centra los elementos */
+    width: 100%;/* Ancho completo */
   }
   .carta__plato{
-    margin-bottom: 80px;
-    margin-right: 0;
-    margin-left: 0;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 80px;/* Espacio inferior */
+    margin-right: 0; /* Sin margen derecho */
+    margin-left: 0;/* Sin margen izquierdo */
+    justify-content: center;/* Centra los elementos */
+    align-items: center; /* Centra los elementos */
   }
   .carta__plato__titulo{
-    margin-left: 0;
+    margin-left: 0; /* Sin margen izquierdo */
   }
   .carta__plato__parrafo{
-    margin-left: 0;
+    margin-left: 0;/* Sin margen izquierdo */
   }
   .descripcion__boton{
-    margin-top: 60px;
+    margin-top: 60px; /* Espacio superior */
   }
   .primer_descuento{
-    justify-content: center;
-    align-items: center;
+    justify-content: center;/* Centra los elementos */
+    align-items: center; /* Centra los elementos */
   }
   .descuento_info{
-    margin-left: 30px;
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-right: 70px;
+    margin-left: 30px;/* Margen izquierdo reducido */
+    margin-top: 0;/* Sin margen superior */
+    display: flex;/* Usa Flexbox */
+    flex-direction: column; /* Disposición en columna */
+    align-items: start;/* Alinea los elementos al inicio */
+    margin-right: 70px; /* Margen derecho */
   }
-  .descuento_info__boton{
-    margin-bottom: 50px;
+  .descuento_info__boton--negro-texto_blanco{
+    margin-bottom: 50px;/* Espacio inferior */
   }
-  .contenido-pizza__titulo{
-    text-align: center;
-    margin: 0 200px;
+  .contenido-pizza__titulo--blanco{
+    text-align: center;/* Centra el texto */
+    margin: 0 200px;/* Margen lateral de 200px */
   }
-  .contenido-pizza__parrafo{
-    margin-left: 200px;
-    margin-right: 200px;
+  .contenido-pizza__parrafo--blanco{
+    margin-left: 200px;/* Margen izquierdo */
+    margin-right: 200px;/* Margen derecho */
   }
   .pizza__hojas{
-    width: 100%;
-    height: 600px;
-    right: 0px;
-    top: -85px;
+    width: 100%;/* Ancho completo */
+    height: 600px; /* Altura de 600px */
+    right: 0px;/* Alinea al borde derecho */
+    top: -85px;/* Ajuste de posición hacia arriba */
   }
 
   .informacion__container{
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column;/* Disposición en columna */
+    align-items: center;/* Centra los elementos */
   }
   .texto{
-    padding-bottom: 70px;
+    padding-bottom: 70px;/* Espacio inferior */
   }
   .contenedor__informacion{
-    align-items: center;
+    align-items: center;/* Centra los elementos */
   }
   .nombre {
-    display: flex;
-    width: 100%;
-    align-items: center;
+    display: flex; /* Usa Flexbox */
+    width: 100%;/* Ancho completo */
+    align-items: center; /* Centra los elementos */
   }
-  .caja_parrafo__texto{
-    max-width: 700px;
+  .caja_parrafo__texto--blanco{
+    max-width: 700px;/* Ancho máximo de 700px */
   }
   .caja_parrafo:nth-child(1){
-    margin-left: 70px;
+    margin-left: 70px; /* Margen izquierdo */
   }
   .caja_parrafo:nth-child(2){
-    margin-right: 70px;
+    margin-right: 70px;/* Margen derecho */
   }
-  .contenido__parrafo{
-    margin-left: 100px;
-    margin-right: 100px;
+  .contenido__parrafo--blanco{
+    margin-left: 100px;/* Margen izquierdo */
+    margin-right: 100px;/* Margen derecho */
   }
   .email{
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 100px;/* Margen izquierdo */
+    margin-right: 100px; /* Margen derecho */
   }
   .contenido{
-    margin-top: 150px;
+    margin-top: 150px;/* Espacio superior */
   }
   .navegador_correo{
-    margin-bottom: 150px;
+    margin-bottom: 150px;/* Espacio inferior */
   }
   .suscripcion__hojas{
     
-    height: 780px;
-    top: -40px;
+    height: 780px;/* Altura ajustada */
+    top: -40px;/* Ajuste de posición hacia arriba */
   }
   .paginas{
-    width: 200px;
-    justify-content: space-evenly;
-    align-items: start;
-    justify-items: start;
+    width: 200px;/* Ancho ajustado */
+    justify-content: space-evenly;/* Espacio uniforme entre elementos */
+    align-items: start; /* Alinea los elementos al inicio */
+    justify-items: start;/* Alinea los elementos al inicio */
   }
   .link{
-    margin-right: 20px;
+    margin-right: 20px; /* Espacio a la derecha */
   }
   .contenedor__enlaces{
-    height: 284px;
+    height: 284px;/* Altura ajustada */
   }
   .contenedor__informacion{
-    margin: 100px 0;
+    margin: 100px 0;/* Espacio superior e inferior */
   }
   .informacion_extra{
-    margin-top: 50px;
-    margin-bottom: 80px;
+    margin-top: 50px; /* Espacio superior */
+    margin-bottom: 80px;/* Espacio inferior */
   }
-  .descripcion__contenido__titulo{
-    margin: 0 70px;
+  .descripcion__contenido__titulo--blanco{
+    margin: 0 70px;/* Margen lateral ajustado */
   }
 }
-@media (width<1000px){
+@media (width<1000px){/* Estilos para pantallas con un ancho máximo de 1000px */
   .primer_descuento{
-    flex-direction: column;
+    flex-direction: column;/* Cambia la disposición a columna */
   }
   .descuento_info{
-    margin-left: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: none;
-    text-align: center;
+    margin-left: none; /* Elimina el margen izquierdo */
+    display: flex;/* Usa Flexbox */
+    flex-direction: column; /* Disposición en columna */
+    align-items: center; /* Centra los elementos */
+    margin-right: none;/* Elimina el margen derecho */
+    text-align: center;/* Centra el texto */
   }
 }
 
-@media (width<970px){
+@media (width<970px){/* Estilos para pantallas con un ancho máximo de 970px */
   .cja__pizza{
-    justify-content: right;
+    justify-content: right;/* Justifica el contenido hacia la derecha */
   }
   .cja__pizza__imagen_piza{
-    width: 764px;
-    height: 769px;
+    width: 764px;/* Ancho de la imagen ajustado */
+    height: 769px;/* Altura de la imagen ajustada */
   }
   .cja__pizza__imagen_triangulo{
-    width: 388px;
-    height: 331px;
-    bottom: -99px;
+    width: 388px; /* Ancho de la imagen del triángulo */
+    height: 331px;/* Altura de la imagen del triángulo */
+    bottom: -99px;/* Ajuste de la posición inferior */
   }
 }

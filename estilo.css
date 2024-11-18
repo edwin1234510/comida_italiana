@@ -10,6 +10,7 @@
   box-sizing: border-box;/*Cambia el comportamiento del modelo de caja. Cuando se usa border-box, el ancho y la altura de un elemento incluyen el relleno y el borde, lo que facilita el manejo del tamaño de los elementos*/
 }
 .comida_italiana{
+  overflow-x: hidden;
   color: var(--color_negro_texto); /* Es la clase de la etiqueta body. Establece el color del texto a un color negro definido en las variables CSS */
 }
 .content_layout {
@@ -161,7 +162,7 @@
   grid-area: menu;/* Define un área específica en un diseño de cuadrícula (grid) llamada 'menu' */
   background-color: var(--color_fondo_blanco);/* Establece el color de fondo utilizando una variable CSS */
 }
-.menu__encabezado {
+.encabezado-menu {
   display: flex; /* Utiliza Flexbox para distribuir los elementos dentro del encabezado */
   justify-content: center;/* Alinea los elementos de forma horizontal al centro */
   align-items: center;/* Alinea los elementos de forma vertical al centro */
@@ -170,50 +171,50 @@
   width: 100%;/* Establece el ancho al 100% */
   text-align: center;/* Centra el texto */
 }
-.menu__encabezado__titulo{
+.encabezado-menu__titulo{
   font-family: "Water Brush", cursive; /* Define una fuente cursiva personalizada */
   font-size: 120px;/* Tamaño de fuente grande para el título */
   font-weight: 100; /* Hace que el texto sea muy delgado */
 }
-.menu__encabezado__parrafo{
+.encabezado-menu__parrafo{
   font-family: "Open Sans", sans-serif;/* Define la fuente 'Open Sans' */
   font-size: 18px;/* Tamaño de fuente mediano para el párrafo */
   font-weight: 400;/* Peso de fuente normal */
   margin-top: 15px;/* Espacio superior de 15px */
 }
-.carta {
+.cartas {
   display: flex; /* Utiliza Flexbox para distribuir los elementos de la carta */
   margin-top: 100px; /* Margen superior de 100px */
   justify-content: space-evenly;/* Distribuye los elementos de forma equitativa con espacio entre ellos */
 }
-.carta__plato {
+.carta-plato {
   font-family: "Open Sans", sans-serif; /* Usa la fuente 'Open Sans' */
   font-weight: 500;/* Define un peso de fuente medio */
 
   margin: 0 20px;/* Margen lateral de 20px a ambos lados */
 }
-.carta__plato__titulo {
+.carta-plato__titulo {
   margin-top: 20px;/* Margen superior de 20px */
   margin-bottom: 15px;/* Margen inferior de 15px */
   font-size: 22px;/* Tamaño de fuente de 22px */
   margin-left: 40px;/* Margen izquierdo de 40px */
 }
-.carta__plato__imagen {
+.carta-plato__imagen {
   width: 376px;/* Ancho de 376px */
   height: 368px;/* Alto de 368px */
 }
-.carta__plato__parrafo {
+.carta-plato__parrafo {
   font-weight: 350; /* Peso de fuente más ligero */
   max-width: 376px;/* Ancho máximo de 376px */
   margin-left: 40px;/* Margen izquierdo de 40px */
 }
-.carta__boton {
+.carta-boton {
   margin-top: 120px;/* Margen superior de 120px */
   width: 100%;/* Ancho completo */
   text-align: center;/* Centra el texto */
   margin-bottom: 120px;/* Margen inferior de 120px */
 }
-.carta__boton__texto--fondo_negro-texto_blanco {
+.carta-boton__texto--fondo_negro-texto_blanco {
   background-color: var(--color_botones_gris); /* Color de fondo de los botones */
   padding: 15px 40px;/* Relleno superior/inferior de 15px y lateral de 40px */
   text-decoration: none; /* Elimina el subrayado del texto */
@@ -226,20 +227,20 @@
   cursor: pointer;/* Cambia el cursor a una mano cuando se pasa sobre el botón */
   transition: 0.5s;/* Transición suave de 0.5 segundos para los cambios de estilo */
 }
-.carta__boton__texto--fondo_negro-texto_blanco:hover {
+.carta-boton__texto--fondo_negro-texto_blanco:hover {
   background-color: var(--color_gris_oscuro);/* Cambia el color de fondo al pasar el cursor */
 }
-.descripcion {
+.descripciones {
   grid-area: descripcion;/* Define un área específica en un diseño de cuadrícula (grid) llamada 'descripcion' */
   background-color: var(--color_fondo_negro); /* Color de fondo negro */
 }
-.descripcion__contenido {
+.descripcion-contenido {
   width: 100%;/* Ancho completo */
   text-align: center; /* Texto centrado */
   margin-top: 50px;/* Margen superior de 50px */
   margin-bottom: 70px; /* Margen inferior de 70px */
 }
-.descripcion__contenido__titulo--blanco {
+.descripcion-contenido__titulo--blanco {
   font-family: "Water Brush", cursive; /* Fuente cursiva personalizada */
   font-size: 120px; /* Tamaño grande de la fuente */
   font-weight: 100;/* Texto delgado */
@@ -262,11 +263,11 @@
 .caja_parrafo__texto--blanco{
   color: var(--color_blanco_texto);/* Color del texto en blanco */
 }
-.descripcion__boton {
+.descripcion-boton {
   font-family: "Open Sans", sans-serif; /* Fuente 'Open Sans' */
   margin-top: 100px;/* Margen superior de 100px */
 }
-.boton__link--blanco-texto_negro {
+.descripcion-boton__link--blanco-texto_negro {
   padding: 12px 40px;/* Relleno superior/inferior de 12px y lateral de 40px */
   color: var(--color_negro_texto); /* Color del texto en negro */
   background-color: var(--color_botones_blancos);/* Color de fondo blanco */
@@ -275,7 +276,7 @@
   font-weight: 750;/* Texto negrita */
   transition: 0.5s;/* Transición suave de 0.5 segundos */
 }
-.boton__link--blanco-texto_negro:hover {
+.escripcion-boton__link--blanco-texto_negro:hover {
   background-color: var(--color_gris_clarito);/* Cambia el color de fondo al pasar el cursor */
 }
 .descuentos {
@@ -364,26 +365,26 @@
   background-color: var(--color_blanco_texto); /* Aplica el color blanco a la línea */
   margin-top: 40px;/* Añade un espacio superior de 40px */
 }
-.cja__pizza {
+.cja_pizza {
   display: flex;/* Usa el modelo de flexbox para organizar los elementos */
   width: 100%;/* Hace que el contenedor ocupe el 100% del ancho disponible */
   justify-content: center;/* Centra los elementos horizontalmente */
   align-items: center; /* Centra los elementos verticalmente */
 }
-.cja__pizza__imagen_piza {
+.cja_pizza__imagen_piza {
   position: relative; /* Define la posición relativa para permitir la colocación de elementos hijos de forma absoluta */
   bottom: -150px; /* Desplaza la imagen hacia abajo 150px respecto a su posición original */
 }
-.cja__pizza__imagen_triangulo {
+.cja_pizza__imagen_triangulo {
   position: absolute;/* Establece la posición absoluta para el triángulo */
   bottom: -130px;/* Desplaza el triángulo hacia abajo 130px respecto a su posición original */
   right: 55%;/* Coloca el triángulo a la derecha, desplazado un 55% desde el borde derecho del contenedor */
 }
-.informacion {
+.informaciones {
   grid-area: informacion;/* Define la ubicación del área de grid para este elemento */
   background-color: var(--color_fondo_blanco); /* Aplica el color de fondo blanco al contenedor */
 }
-.informacion__container {
+.informacion_container {
   width: 100%; /* Define el ancho del contenedor como el 100% */
   display: flex; /* Usa flexbox para organizar los elementos */
   flex-direction: row;/* Organiza los elementos en fila */
@@ -396,14 +397,14 @@
 .texto:nth-child(2) {
   margin: 0 20px; /* Añade márgenes laterales de 20px solo al segundo hijo */
 }
-.text__titulo {
+.texto__titulo {
   text-align: center; /* Centra el título dentro de su contenedor */
   font-family: "Water Brush", cursive;/* Aplica la fuente personalizada 'Water Brush' */
   font-size: 60px;/* Define el tamaño de la fuente en 60px */
   font-weight: 200;/* Define un peso de fuente ligero */
   margin-bottom: 20px; /* Añade un espacio inferior de 20px */
 }
-.text__parrafo {
+.texto__parrafo {
   font-family: "Open Sans", sans-serif;/* Usa la fuente 'Open Sans' para el párrafo */
   font-size: 15px;/* Define el tamaño de la fuente como 15px */
   font-weight: 350;/* Establece un peso medio para la fuente */
@@ -509,15 +510,13 @@
   grid-area: redes;/* Define el área del grid donde se ubica */
   background-color: var(--color_fondo_blanco); /* Color de fondo blanco */
 }
-.contenedor__informacion {/* Contenedor de información con disposición en fila */
+.red_informacion {/* Contenedor de información con disposición en fila */
   width: 100%;/* Ancho completo */
   font-family: "Open Sans", sans-serif;/* Fuente personalizada */
   margin: 200px 0;/* Margen superior e inferior de 200 píxeles */
   display: flex;/* Uso de Flexbox */
   flex-direction: row;/* Elementos organizados en fila */
   justify-content: space-around; /* Espacio uniforme entre los elementos */
-}
-.paginas { /* Estilos específicos para el contenedor de páginas */
 }
 .paginas__titulo {/* Título de las páginas */
   margin-bottom: 20px;/* Espacio inferior de 20 píxeles */
@@ -552,8 +551,6 @@
 .link {/* Estilo individual de los enlaces */
   margin-right: 50px; /* Espacio a la derecha de 50 píxeles */
 }
-.link__lista {/* Lista de enlaces */
-}
 .link__titulo {/* Título de los enlaces */
   margin-bottom: 15px;/* Espacio inferior de 15 píxeles */
   font-weight: 500;/* Grosor medio de la fuente */
@@ -568,17 +565,15 @@
   .inicio{
     padding-bottom: 25px;/* Espaciado inferior adicional */
   }
-  
-  .menu__encabezado__{
-    margin-left: 70px;/* Margen izquierdo de 70px */
-    margin-right: 70px;/* Margen derecho de 70px */
+  .encabezado-menu__titulo{
+    margin: 0 20px;/* Espaciado en la derecha y izquierda adicional */
   }
-  .menu__encabezado__parrafo{
+  .encabezado-menu{
+    margin-top: 110px;/* Espaciado superior adicional */
+  }
+  .encabezado-menu__parrafo{
     margin-left: 70px; /* Ajuste de margen izquierdo */
     margin-right: 70px;/* Ajuste de margen derecho */
-  }
-  .menu__encabezado{
-    margin-top: 110px;/* Espaciado superior adicional */
   }
   .contenedor-informacion{
     flex-direction: column; /* Cambia la disposición a columna */
@@ -597,33 +592,32 @@
   }
   .contenedor-buscador{
     justify-content: end; /* Alinea el buscador al final */
-
   }
   .nombre{
     padding-bottom: 50px;/* Espaciado inferior */
     text-align: center; /* Centra el texto */
   }
-  .carta{
+  .cartas{
     flex-direction: column;/* Disposición en columna */
     text-align: center;/* Centra el texto */
     justify-content: center; /* Centra los elementos */
     align-items: center; /* Centra los elementos */
     width: 100%;/* Ancho completo */
   }
-  .carta__plato{
+  .carta-plato{
     margin-bottom: 80px;/* Espacio inferior */
     margin-right: 0; /* Sin margen derecho */
     margin-left: 0;/* Sin margen izquierdo */
     justify-content: center;/* Centra los elementos */
     align-items: center; /* Centra los elementos */
   }
-  .carta__plato__titulo{
+  .carta-plato__titulo{
     margin-left: 0; /* Sin margen izquierdo */
   }
-  .carta__plato__parrafo{
+  .carta-plato__parrafo{
     margin-left: 0;/* Sin margen izquierdo */
   }
-  .descripcion__boton{
+  .descripcion-boton{
     margin-top: 60px; /* Espacio superior */
   }
   .primer_descuento{
@@ -656,15 +650,12 @@
     top: -85px;/* Ajuste de posición hacia arriba */
   }
 
-  .informacion__container{
+  .informacion_container{
     flex-direction: column;/* Disposición en columna */
     align-items: center;/* Centra los elementos */
   }
   .texto{
     padding-bottom: 70px;/* Espacio inferior */
-  }
-  .contenedor__informacion{
-    align-items: center;/* Centra los elementos */
   }
   .nombre {
     display: flex; /* Usa Flexbox */
@@ -711,14 +702,11 @@
   .contenedor__enlaces{
     height: 284px;/* Altura ajustada */
   }
-  .contenedor__informacion{
-    margin: 100px 0;/* Espacio superior e inferior */
-  }
   .informacion_extra{
     margin-top: 50px; /* Espacio superior */
     margin-bottom: 80px;/* Espacio inferior */
   }
-  .descripcion__contenido__titulo--blanco{
+  .descripcion-contenido__titulo--blanco{
     margin: 0 70px;/* Margen lateral ajustado */
   }
 }
@@ -737,16 +725,7 @@
 }
 
 @media (width<970px){/* Estilos para pantallas con un ancho máximo de 970px */
-  .cja__pizza{
-    justify-content: right;/* Justifica el contenido hacia la derecha */
-  }
-  .cja__pizza__imagen_piza{
-    width: 764px;/* Ancho de la imagen ajustado */
-    height: 769px;/* Altura de la imagen ajustada */
-  }
-  .cja__pizza__imagen_triangulo{
-    width: 388px; /* Ancho de la imagen del triángulo */
-    height: 331px;/* Altura de la imagen del triángulo */
-    bottom: -99px;/* Ajuste de la posición inferior */
+  .cja_pizza__imagen_triangulo{
+    display: none;/*oculta un elemento, por lo que no ocupara ningún espacio*/
   }
 }

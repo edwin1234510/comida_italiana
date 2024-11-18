@@ -10,7 +10,7 @@
   box-sizing: border-box;/*Cambia el comportamiento del modelo de caja. Cuando se usa border-box, el ancho y la altura de un elemento incluyen el relleno y el borde, lo que facilita el manejo del tamaño de los elementos*/
 }
 .comida_italiana{
-  overflow-x: hidden;
+  overflow-x: hidden;/*ocultar el contenido que se desborda de un contenedor en el eje horizontal*/
   color: var(--color_negro_texto); /* Es la clase de la etiqueta body. Establece el color del texto a un color negro definido en las variables CSS */
 }
 .content_layout {
